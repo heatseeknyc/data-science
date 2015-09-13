@@ -24,6 +24,7 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
         - [Verifying the Numbers](#verifying)
         - [R Example #2: Correlations between median income and complaint counts (by zip code)](#rexample2)
     - [Cleaning and Massaging Data: Tools and Techniques](#cleaning)
+        - [Use R!](#usingr)
         - [awk](#awk)
         - [tail](#tail)
         - [sed](#sed)
@@ -36,6 +37,7 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
         - [Querying and asking questions of the data](#postgresquerying)
         - [Exporting from PostgreSQL](#postgresexporting)
         - [Usefule PostgreSQL commands](#postgrescommands)
+- [Licensing](#licensing)
         
   
 <a name="overview"/>
@@ -401,11 +403,15 @@ In the second part of this two-part series about methodology, which we will be p
 <a name="cleaning"/>
 ###Cleaning and Massaging Data: Tools and Techniques
 
-If you are using a Mac or Linux OS, you have some very valuable commands and methods for processing text and data.  
+If you are using a Mac or Linux, you have some very useful command line tools and methods for processing text and data. These tools are fast and, when mastered, can assist in a variety of ways when 'cleaning' your data. What do we mean by cleaning? Well, data that you have grabbed online will not always fit easily into a database, R or a data visualization tool. There could be bad formatting, for instance.   
 
-For instance, the awk command allows us to do a lot of selective manipulation, such as retrieving only columns we want from a file and output to a new file. awk is also very fast and, since many of the files we are analyzing have a large amount of data, this is helpful and much faster than opening in a program such as Excel, searching for and removing certain rows and/or columns, and re-saving the file. 
+With our Heat Seek data, we want only a subset of columns to load into Postgres (which we see at the end of this document). The ```awk``` command allows us to do a lot of selective manipulation, such as retrieving only columns we want from a file and output to a new file. ```awk``` is also very fast and, since many of the files we are analyzing have a large amount of data, this is helpful and much faster than opening in a program such as Excel, searching for and removing certain rows and/or columns, and re-saving the file. 
 
-Using R, we can first load the entire 311 dataset of heating complaints into R, and then output a new csv file using a semicolon ; as a delimiter:
+One useful technique to quickly convert a csv file into a semi-colon delimited file involves R. In fact, R has a number of useful commands for cleaning data and does a great job of handling 'dirty' data as well, but we will talk about that at another point. 
+
+<a name="usingr"/>
+####Use R!
+Using R, first load the entire 311 dataset of heating complaints into R, and then output a new csv file using a semicolon ; as a delimiter:
 
 ```
 > df = read.csv("311_Service_Requests_from_2010_to_Present.csv")
@@ -456,6 +462,22 @@ From the command line, we can take a look at the total number of rows (from 2010
 > wc -l 311_Heat_Seek_Subset.csv                    
  1165724 output.csv
 ```
+
+<a name="man"/>
+####man pages
+
+This is a small subset of useful tools at the command line and there are many more out there. Even while using a command, though, there are other options which may prove to be useful. We can read the documentation for a command by simply typing
+
+```
+man <command>
+    
+e.g.
+
+man awk
+```
+
+The man page for the specific command - the manual - will then come up. 
+
 <a name="loadingpostgres"/>
 ###Loading and Analyzing Data Using PostgreSQL
 
@@ -722,3 +744,7 @@ Export all rows with created_date > 2015-01-01:
 ```
 COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY created_date ASC) To '/Users/jesse/Desktop/2015_complaints.csv' WITH CSV;
 ```
+
+## Licensing
+
+Note: This project and all of the subsequent guides, code,  are licensed under the terms of the MIT license. For more information, please visit https://opensource.org/licenses/MIT
