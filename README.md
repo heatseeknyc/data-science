@@ -256,7 +256,7 @@ Within R, the Created.Date column is too granular for our needs. So let’s crea
 
 According to the analysis we’ve built so far, we can see that, between October 1st, 2014 and May 31st, 2015, there were 230,702 complaints related to heat in the city of New York. That’s a lot. We actually wrote about this back in June, and you can check our our entry here. 
 
-####Verifying the Numbers
+###Verifying the Numbers
 
 But is this information we have found correct? It turns out that the NYC Housing Preservation & Development (HPD) publishes their official total counts on their site. 
 
@@ -354,7 +354,7 @@ When we hit enter, you should see a scatter plot populated.
 In the second part of this two-part series about methodology, which we will be posting in a couple of weeks, we will do a deeper dive into creating data visualizations.  
 
 
-##Cleaning and Massaging Data: Tools and Techniques
+###Cleaning and Massaging Data: Tools and Techniques
 
 If you are using a Mac or Linux OS, you have some very valuable commands and methods for processing text and data.  
 
@@ -370,7 +370,7 @@ Using R, we can first load the entire 311 dataset of heating complaints into R, 
 
 Note that we are temporarily using ; as a delimiter. This is because there can be commas within some of the fields, and issues can arise with the next step when using awk. 
 
-###awk
+####awk
 
 Now let’s use awk to grab the columns we are going to load into our database:
 
@@ -380,7 +380,7 @@ awk -F "\"*;\"*" '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$24,$25}' OFS="," 31
 
 We already removed our header when we did the export from R. If we had not, though, there are ways we can do this from the command line. One method would be to use the tail command.
 
-###tail
+####tail
 
 ```
 tail -n +2 311_Heat_Seek_Subset.csv > 311_Heat_Seek_Subset_No_Header.csv
@@ -389,7 +389,7 @@ tail -n +2 311_Heat_Seek_Subset.csv > 311_Heat_Seek_Subset_No_Header.csv
 tail -n +2 is saying “give me the ‘end’ of the file, starting at the second line.”
 file.txt is our input and we redirect the output to file.stdout
 
-###sed
+####sed
 
 Additionally, we can use sed to remove the first line of the file (i.e. the header). One such example is as follows:
 
@@ -399,7 +399,7 @@ sed '1d' 311_Heat_Seek_Subset.csv > 311_Heat_Seek_Subset_No_Header.csv
 
 Both awk and sed are powerful - and fast - command line tools and we use them often when performing data analysis at Heat Seek. These commands allow us to quickly clean and massage our data so that we can load into a database or application without issues.  
 
-###wc 
+####wc 
 
 From the command line, we can take a look at the total number of rows (from 2010 until 2015):
 
@@ -407,3 +407,252 @@ From the command line, we can take a look at the total number of rows (from 2010
 > wc -l 311_Heat_Seek_Subset.csv                    
  1165724 output.csv
 ```
+
+###Loading and Analyzing Data Using PostgreSQL
+
+####PostgreSQL Example #1: Loading, Querying and Exporting
+
+As we mentioned before, we use a variety of techniques, tools and technologies to get to the heart of the data, to find answers to our questions. While R is our primary language for analyzing our data, databases such as PostgreSQL are invaluable tools to help us quickly load in and select subsets of data. We can also use PostgreSQL to merge datasets as well, as we’ll show below. 
+
+First, we need data. Follow the steps in The Data section above. 
+
+You will want to first download the 311_Service_Requests_from_2010_to_Present.csv file.
+
+
+####Setting up PostgreSQL for the first time
+
+PostgreSQL is a type of Relational Database Management System (RDMS) and what we primarily use at Heat Seek to store much of our data. 
+
+If you do not have PostgreSQL installed on your system, follow these simple steps (if on a Mac):
+
+*1. Install PostgreSQL.* 
+
+On a Mac using homebrew, you can simply type the following at a Terminal prompt: ```brew install postgresql```
+
+*2. After you have PostgreSQL installed, download and install the postgres.app application.* 
+
+This app makes it easy to start PostgreSQL. Launch the app and you will see a small elephant in your task tray. Your local instance should now be started.
+
+*3. From terminal type psql.*
+
+You should be logged into your local instance. You now have PostgreSQL installed. 
+
+Note: if you have any issues getting PostgreSQL up and running, there are a number of great resources online. Hopefully these 
+
+####Creating the Heat Seek Database 
+
+Now that you have PostgreSQL installed, we can create our Heat Seek instance and load in our data. 
+
+*1. If you are at a terminal window, type psql to log into your PostgreSQL instance. Now create the database heatseek:*
+
+```
+CREATE DATABASE heatseek
+```
+
+*2. Log out using \q and then log into heatseek database:*
+
+```
+psql -d heatseek
+```
+
+*3. Now let’s revisit the 311_Service_Requests_from_2010_to_Present.csv file.* 
+
+Remove all but the following 13 columns:
+
+```
+ id               
+ created_date     
+ closed_date      
+ agency           
+ agency_name     
+ complaint_type   
+ descriptor       
+ location_type    
+ incident_zip     
+ incident_address  
+ street_name      
+ community_board  
+ borough          
+```
+     
+####Creating the complaints table and loading the data
+
+*1. Create the heatseek database and switch to it:*
+
+```
+CREATE DATABASE heatseek
+USE heatseek
+```
+
+*2. Create the complaints table:*
+
+```
+CREATE TABLE complaints(
+  id INT,
+  created_date DATE,
+  closed_date DATE,
+  agency VARCHAR(10),
+  agency_name VARCHAR(255),
+  complaint_type VARCHAR(255),
+  descriptor VARCHAR(255),
+  location_type VARCHAR(30),
+  incident_zip VARCHAR(5),
+  incident_address VARCHAR(255),
+  street_name VARCHAR(255),
+  community_board VARCHAR(255),
+  borough VARCHAR(20)
+  ) 
+```  
+
+*2. Import the 3-1-1 data into the complaints table* 
+
+e.g.
+  
+```
+heatseek=# COPY complaints FROM '/Users/jesse/Desktop/311_Heat_Seek_Subset.csv' CSV;
+COPY 1165724
+```
+
+You will need to change the location of the 311_Heat_Seek_Subset.csv location to match the location of your dataset.
+
+
+####Querying and asking questions of the data
+
+Ok, if all goes well and the data loads into the table, we can now begin to extract the data and information about it from the psql terminal window. 
+
+*1. Let’s check our total counts to make sure all rows from 2010 until 2015 were loaded:*
+
+```
+heatseek=# select count(id) from complaints;
+  count
+---------
+ 1165724
+```
+
+*2. Now let’s look at the 2014-2015 winter count:*
+
+```
+heatseek=# select COUNT(id) FROM complaints WHERE created_date >= '2014-10-01' AND created_date <= '2015-05-31';
+ count
+--------
+ 230702
+```
+
+As we showed in our blog post earlier this summer, this is the exact count we expect to see. 
+
+*3. We can now use our database to give counts year-over-year, for instance:*
+
+```
+SELECT DATE_TRUNC('year', date) as date, 
+       COUNT(*)
+FROM (
+  SELECT created_date as date
+  FROM complaints) as foo
+GROUP BY 1
+ORDER BY 1, 2;
+
+          date          | count
+------------------------+--------
+ 2010-01-01 00:00:00-05 | 214218
+ 2011-01-01 00:00:00-05 | 190184
+ 2012-01-01 00:00:00-05 | 182974
+ 2013-01-01 00:00:00-05 | 202896
+ 2014-01-01 00:00:00-05 | 230364
+ 2015-01-01 00:00:00-05 | 145088
+```
+
+*4. But what we really need to see is the count over the winter dates, i.e. October 1st through May 31st of each year. One way we can do this is using a combination of UNION statements. *
+
+```
+SELECT '2014-2015', count FROM (select COUNT(id) as count FROM complaints WHERE created_date >= '2014-10-01' AND created_date <= '2015-05-31') as winter_2014_2015
+UNION
+SELECT '2013-2014', count FROM (select COUNT(id) as count FROM complaints WHERE created_date >= '2013-10-01' AND created_date <= '2014-05-31') as winter_2013_2014
+UNION
+SELECT '2012-2013', count FROM (select COUNT(id) as count FROM complaints WHERE created_date >= '2012-10-01' AND created_date <= '2013-05-31') as winter_2012_2013
+UNION
+SELECT '2011-2012', count FROM (select COUNT(id) as count FROM complaints WHERE created_date >= '2011-10-01' AND created_date <= '2012-05-31') as winter_2011_2012
+UNION
+SELECT '2010-2011', count FROM (select COUNT(id) as count FROM complaints WHERE created_date >= '2010-10-01' AND created_date <= '2011-05-31') as winter_2010_2011;
+
+ 	year | count
+-----------+--------
+ 2013-2014 | 212669
+ 2012-2013 | 194122
+ 2014-2015 | 230702
+ 2011-2012 | 170488
+ 2010-2011 | 210522
+```
+
+We can see that the numbers match from our post on DATE as well here.
+
+*5. Another question we had was the count by borough. We can easily modify our query to find the result of this information. For example, what were the total counts, by borough, for the 2014-2015 winter can be queried as:*
+
+
+
+```
+heatseek=# select borough, COUNT(id) FROM complaints WHERE created_date >= '2014-10-01' AND created_date <= '2015-05-31' GROUP BY 1 ORDER BY 2 DESC;
+
+
+    borough    | count
+---------------+-------
+ BRONX         | 76501
+ BROOKLYN      | 69358
+ MANHATTAN     | 52524
+ QUEENS        | 30162
+ STATEN ISLAND |  2157
+```
+
+
+
+####Exporting from PostgreSQL
+
+In our next post on methodology and the steps we have taken at Heat Seek in our analyses, we’ll be looking at how we have created visualizations of our data. We often need to export our data from PostgreSQL in order to do that. 
+
+Suppose we want to export all of our columns to a CSV file, focusing only on the 2014-2015 winter. We can do this using a combination of the COPY PostgreSQL command and a SQL statement:
+
+```
+heatseek=# COPY (SELECT * FROM complaints WHERE created_date >= '2014-10-01' AND created_date <= '2015-05-31' ORDER BY created_date ASC) To '/Users/jesse/Desktop/2014_2015_complaints.csv' WITH CSV;
+COPY 230702
+```
+
+If you look on your desktop, you should see a file called 2014_2015_complaints.csv now. 
+
+Another example would be exporting all winter 2014-2015 rows where the complaint was made in Brooklyn:
+
+```
+heatseek=# COPY (SELECT * FROM complaints WHERE created_date >= '2014-10-01' AND created_date <= '2015-05-31' AND borough LIKE '%BROOKLYN%') To '/Users/jesse/Desktop/2014_2015_brooklyn_complaints.csv' WITH CSV;
+```
+
+####Useful PostgreSQL Commands
+
+If you are not familiar with PostgreSQL, here are some useful commands:
+
+List all databases:
+
+\l 			
+
+Use the ‘heatseek’ database:
+
+use heatseek 	
+
+List all tables:
+
+\d 			
+
+List columns in table:
+
+\d <table> 
+
+e.g. \d complaints
+
+Export database (run from command line, not from within psql):
+
+pg_dump -U user -d database > blah.sql 
+
+Import a .sql dump:
+
+\i foo.sql 
+
+Export all rows with created_date > 2015-01-01:
+
+COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY created_date ASC) To '/Users/jesse/Desktop/2015_complaints.csv' WITH CSV;
