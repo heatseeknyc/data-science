@@ -22,14 +22,14 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
 <a name="overview"/>
 ## Overview
 
-At Heat Seek, our aim is to use innovative technology and data to eradicate the heating epidemic plaguing tens of thousands of New York’s in the winter months. To fulfill this mission, data obviously plays a major role and we have repeatedly asked - and been asked - a lot of questions: just how bad is the heating situation for New Yorkers? Is this an ongoing problem? Which areas does this heating crisis effect the most? What boroughs submit the most heating complaints? How has the heating situation changed from year-to-year? Are there any other trends we see?
+At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, data plays a major role. We have repeatedly asked - and been asked - many questions: how many New Yorkers file heating complaints each winter? Are the number of complaints going up or down? In which boroughs and neighborhoods do the most heating complaints com from? Are there any other trends we see?
 
-We start all of our analyses with a question and this often leads to a lot of other questions. When we have compiled a list and a simple Google search doesn’t suffice, then we start to dig in. With our questions comes the need for data and, oftentimes, even more data on top of that. Of course, at the heart of all of our analyses is data. 
+We start all of our analyses with questions such as these and often our analysis leads to other questions. We dig for answers but there is a lot of information out there, and often it does not directly answer our question at hand. So we being our own analysis, and look for answers. Of course, at the heart of all of our analyses - at the core of our questions - comes the need for data. 
 
 <a name="data"/>
 ## Data
 
-At the heart of every analysis - whether it is Heat Seek’s or a study at a university or a confidential report from within a Fortune 500 company - obtaining data is key. A quick search on Google for the phrase "data is the new oil" will illustrate how important data is, and the seriousness with which data scientists, analysts, executives, and everyone takes it. Data is important. 
+Every analysis - whether it is Heat Seek’s or a study at a university or a confidential report from within a Fortune 500 company - requires data. But not just any data. Reliable, good datasets are needed. Obtaining reliable data is actually more difficult than many people realize. A quick search on Google for the phrase "data is the new oil" will illustrate how important data is, and the seriousness with which data scientists, analysts, executives, and most anyone takes it. Data is important. Good data is even more important.
 
 At a higher level, there are three ways Heat Seek, and many individuals and organizations, obtain data:
 
