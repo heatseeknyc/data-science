@@ -19,6 +19,8 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
 - [Data Tools and Techniques for Extracting, Transforming, and Loading](#datatools)
     - [Loading and Analyzing Data Using R](#rdata)
         - [R Example #1: Total heating complaint counts by winter seasons](#rexample1)
+            - [Plotting a scatterplot using ggplot](#rscatterplot)
+            - [Curve fitting](#rcurvefit)
         - [Verifying the Numbers](#verifying)
         - [R Example #2: Correlations between median income and complaint counts (by zip code)](#rexample2)
     - [Cleaning and Massaging Data: Tools and Techniques](#cleaning)
@@ -368,24 +370,26 @@ library(RSvgDevice)	## for clean SVG export
 *4. Now, let’s take a subset and grab only the data we want for our scatter plot. Then count up the number of rows (i.e. the complaint count per zip):*
 
 ```
-> ###### pull only Incident.Zip, Borough, and Median.Income
 > df_subset <- df[,c(3,4,7)]
 > names(df_subset)
 > [1] "Incident.Zip"  "Borough"       "Median.Income"
 
-> ###### get complaint counts per zip -- retain borough, income
+>
 counts <- count(df_subset,c(1,2,3))
 ```
 
+<a name="rscatterplot"/>
+###### Plotting a scatterplot using ggplot 
 *5. Now let’s look at a scatter plot using our counts and the subset of our data.* 
 
 ```
-###### plot using ggplot scatterplot
 ggplot(counts,aes(x=Median.Income,y=freq,color=Borough)) +geom_point()
 ```
 
-When we hit enter, you should see a scatter plot populated. 
+Now when we execute this command, we'll see a scatter plot populated. 
 
+<a name="rcurvefit"/>
+###### Curve fitting
 *6. We can then go one step further, and look at line fitting such as Loess smoothing:*
 
 ```
