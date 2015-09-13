@@ -5,11 +5,14 @@ Repository for all-things-data at Heat Seek. This includes our methodologies, da
 
 
 # Data Analysis and Methodology - Tools, Techniques and Technologies - Part I
-[Overview](##overview) 
-[Data](##data) 
-[Open Data](###opendata) 
-[NYC 311 Data](####nyc311data) 
-[API](###apis)
+- [Overview](#overview) 
+- [Data](#data) 
+ - [Open Data](#opendata) 
+   - [NYC 311 Data](#nyc311data) 
+ - [APIs](#apis)
+  - [Weather Underground](#weatherunderground)
+ - [Web Scraping](#webscraping)
+- [Merging Data](#mergingdata)
  
 <a name="overview"/>
 ## Overview
@@ -92,7 +95,7 @@ Additionally, we can see the overall size of the file using the ls command with 
 
 <a name="apis"/>
 ###APIs
-
+<a name="weatherunderground"/>
 ####Weather Underground
 
 In addition to 311 data, Heat Seek uses a number of other datasets to perform analysis. Weather Underground provides an excellent API for retrieving historical weather information. Additionally, the U.S. Census Bureau has recently released an API to access demographic, city-level data using CitySDK. 
@@ -126,10 +129,12 @@ python wunderground.py -t <TOKEN> -s ‘2015-09-05’ -e ‘2015-09-08’
 
 Note: in order to make calls to the API and retrieve historical temperatures you will need a Weather Underground API token. 
 
+<a name="citysdk"/>
 ####CitySDK
 
 TODO
 
+<a name="mergingdata"/>
 ###Merging Data
 
 Once we have retrieved the temperatures for a given historical date range, we can then merge this data in with our other data. The date field is the key we use to merge in these average temperatures. In the case of PostgreSQL, a table with the date and temperature is first created and then a SELECT statement can be used to join the complaint data with the average daily temperature for each date. 
