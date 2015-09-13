@@ -23,7 +23,7 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
             - [Curve fitting](#rcurvefit)
         - [Verifying the Numbers](#verifying)
         - [R Example #2: Correlations between median income and complaint counts (by zip code)](#rexample2)
-    - [Cleaning and Massaging Data: Tools and Techniques](#cleaning)
+    - [Cleaning, Massaging and Knowing Your Data](#cleaning)
         - [Use R!](#usingr)
         - [awk](#awk)
         - [tail](#tail)
@@ -401,7 +401,7 @@ Now when we execute this command, we'll see a scatter plot populated.
 In the second part of this two-part series about methodology, which we will be posting in a couple of weeks, we will do a deeper dive into creating data visualizations.  
 
 <a name="cleaning"/>
-###Cleaning and Massaging Data: Tools and Techniques
+###Cleaning, Massaging and Knowing Your Data
 
 If you are using a Mac or Linux, you have some very useful command line tools and methods for processing text and data. These tools are fast and, when mastered, can assist in a variety of ways when 'cleaning' your data. What do we mean by cleaning? Well, data that you have grabbed online will not always fit easily into a database, R or a data visualization tool. There could be bad formatting, for instance.   
 
