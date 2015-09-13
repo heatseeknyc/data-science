@@ -42,7 +42,6 @@ if end < start:
 	print "Error: end date " + str(end) + " occurs before start date " + str(start)
 	sys.exit()
 	
-# d48122149ff66bca
 
 for dt in rrule(DAILY, dtstart=start, until=end):
 	
