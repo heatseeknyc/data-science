@@ -1,8 +1,6 @@
-# data-science
+# Heat Seek Data Science 
 
-Repository for all-things-data at Heat Seek. This includes our methodologies, datasets, and information on the data visualization tools and techniques we utilize when performing data analysis. 
-
-
+This repository hosts all-things-data for Heat Seek and includes our methodologies, datasets, and information on the data visualization tools and techniques we utilize when performing data analysis. 
 
 # Data Analysis and Methodology - Tools, Techniques and Technologies - Part I
 - [Overview](#overview) 
@@ -11,8 +9,12 @@ Repository for all-things-data at Heat Seek. This includes our methodologies, da
    - [NYC 311 Data](#nyc311data) 
  - [APIs](#apis)
   - [Weather Underground](#weatherunderground)
+  - [CitySDK](#citysdk)
  - [Web Scraping](#webscraping)
 - [Merging Data](#mergingdata)
+- [Data Tools and Techniques for Extracting, Transforming, and Loading](#datatools)
+ - [Loading and Analyzing Data Using R](#rdata)
+  - [R Example #1: Total heating complaint counts by winter seasons](#rexample1)
  
 <a name="overview"/>
 ## Overview
@@ -147,12 +149,14 @@ Note: Casting was done in this example to illustrate the complaints created_at c
 
 In an analysis earlier this summer, we merged complaint count data with weather data and then looked at the peaks and valleys between the two metrics. There was an obvious, inverse relationship but it also seemed that when temperatures dropped rapidly, complaints would also increase rapidly. In the second visualization of this blog post, it’s as though individuals get used to being cold and only call when the temperature drops suddenly again.
 
+<a name="datatools"/>
 ##Data Tools and Techniques for Extracting, Transforming, and Loading
 
 Now that we we our initial dataset, we’ll need some tools to start our analysis. At Heat Seek - like most organizations these days - we do not use any one tool, technique or technology. Languages such as R and Python are powerful when analyzing data and a database such as PostgreSQL can help us quickly load in, select subsets and merge datasets. Additionally, we also use some data visualization tools and libraries. These include Tableau, Spotfire, Adobe Illustrator, and libraries such as D3.js and R’s ggplot2. Data visualization will be covered separately.
 
 To begin with, let’s start with one of the most valuable and longest-used data scientist languages: R
 
+<a name="rdata"/>
 ###Loading and Analyzing Data Using R
 
 First, you should have R installed. There are a number of mirrors where you can download R and the language works on a variety of operating systems including Windows, OSX and Linux. Also, R Studio is a great supplemental tool for R code development as well. 
@@ -161,6 +165,7 @@ R is very simple to set up so once you have R installed you should be able to st
 
 Note: If you are not familiar with R, there are some great tutorials online. Additionally, Coursera offers some classes as well. 
 
+<a name="rexample1"/>
 ####R Example #1: Total heating complaint counts by winter seasons
 
 *1. Within R, let’s first load the 311 data we downloaded into a dataframe called df:*
