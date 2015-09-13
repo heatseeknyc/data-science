@@ -13,7 +13,7 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
     - [APIs](#apis)
         - [Weather Underground](#weatherunderground)
         - [CitySDK](#citysdk)
-    - [Web Scraping](#webscraping)
+    - [Scraping](#scraping)
         - [Building Information Numbers - BIN](#BIN)
 - [Merging Data](#mergingdata)
 - [Data Tools and Techniques for Extracting, Transforming, and Loading](#datatools)
@@ -165,6 +165,13 @@ Note: in order to make calls to the API and retrieve historical temperatures you
 ####CitySDK
 
 CitySDK is a project developed by the United States Census Bureau that provides a user-friendly “toolbox” for civic hackers to connect local and national public data. Heat Seek utilizes CitySDK to collect demographic data at the city-level and merge it in with our other datasets to gain a better understanding of the city's landscape as it relates to heating. More information on CitySDK can be found out: https://uscensusbureau.github.io/citysdk
+
+<a name="scraping"/>
+###Scraping
+
+Another way that Heat Seek obtains data is through web scraping. Python libraries such as Beautiful Soup allow us to collect information from various sites and this data can then be merged in with our other datasets. One example site that Heat Seek 'scraped' was the 'Geographic Online Address Translator' or [GOAT](http://a030-goat.nyc.gov/goat/Default.aspx). 
+
+This site contains a lot of useful information when a user is submits an address through the form. Data such as BIN, district numbers and other building-level information is returned. But this information is not readily available unless the form is submitted, so a Python script (bs_bin.py in the examples directory) was created to assist in gather this information. 
 
 <a name="mergingdata"/>
 ###Merging Data
