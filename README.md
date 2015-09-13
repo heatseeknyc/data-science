@@ -21,7 +21,12 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
   - [R Example #1: Total heating complaint counts by winter seasons](#rexample1)
   - [Verifying the Numbers](#verifying)
   - [R Example #2: Correlations between median income and complaint counts (by zip code)](#rexample2)
- 
+  - [Cleaning and Massaging Data: Tools and Techniques](#cleaning)
+ - [Loading and Analyzing Data Using PostgreSQL](#loadingpostgres)
+  - [PostgreSQL Example #1: Loading, Querying and Exporting](#postgresex1)
+  - [Setting up PostgreSQL for the first time](#postgresfirst)
+  - [Creating the Heat Seek Database](#postgresdb)
+  
 <a name="overview"/>
 ## Overview
 
@@ -380,7 +385,7 @@ When we hit enter, you should see a scatter plot populated.
 
 In the second part of this two-part series about methodology, which we will be posting in a couple of weeks, we will do a deeper dive into creating data visualizations.  
 
-
+<a name="cleaning"/>
 ###Cleaning and Massaging Data: Tools and Techniques
 
 If you are using a Mac or Linux OS, you have some very valuable commands and methods for processing text and data.  
@@ -434,9 +439,10 @@ From the command line, we can take a look at the total number of rows (from 2010
 > wc -l 311_Heat_Seek_Subset.csv                    
  1165724 output.csv
 ```
-
+<a name="loadingpostgres"/>
 ###Loading and Analyzing Data Using PostgreSQL
 
+<a name="postgresex1"/>
 ####PostgreSQL Example #1: Loading, Querying and Exporting
 
 As we mentioned before, we use a variety of techniques, tools and technologies to get to the heart of the data, to find answers to our questions. While R is our primary language for analyzing our data, databases such as PostgreSQL are invaluable tools to help us quickly load in and select subsets of data. We can also use PostgreSQL to merge datasets as well, as we’ll show below. 
@@ -445,7 +451,7 @@ First, we need data. Follow the steps in The Data section above.
 
 You will want to first download the 311_Service_Requests_from_2010_to_Present.csv file.
 
-
+<a name="postgresfirst"/>
 ####Setting up PostgreSQL for the first time
 
 PostgreSQL is a type of Relational Database Management System (RDMS) and what we primarily use at Heat Seek to store much of our data. 
@@ -466,6 +472,7 @@ You should be logged into your local instance. You now have PostgreSQL installed
 
 Note: if you have any issues getting PostgreSQL up and running, there are a number of great resources online. Hopefully these 
 
+<a name="postgresdb"/>
 ####Creating the Heat Seek Database 
 
 Now that you have PostgreSQL installed, we can create our Heat Seek instance and load in our data. 
