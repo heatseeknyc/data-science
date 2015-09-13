@@ -33,9 +33,9 @@ At the heart of every analysis - whether it is Heat Seek’s or a study at a uni
 
 At a higher level, there are three ways Heat Seek, and many individuals and organizations, obtain data:
 
-*Open Source
-*APIs
-*Scraping w sitese
+* Open Source
+* APIs
+* Scraping w sitese
 
 To begin with, let's start with Open Data. 
 
