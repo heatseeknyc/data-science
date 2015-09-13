@@ -3,16 +3,22 @@
 Repository for all-things-data at Heat Seek. This includes our methodologies, datasets, and information on the data visualization tools and techniques we utilize when performing data analysis. 
 
 
+
 # Data Analysis and Methodology - Tools, Techniques and Technologies - Part I
-
-
+[Overview](##overview) 
+[Data](##data) 
+[Open Data](###opendata) 
+[NYC 311 Data](####nyc311data) 
+[API](###apis)
+ 
+<a name="overview"/>
 ## Overview
 
 At Heat Seek, our aim is to use innovative technology and data to eradicate the heating epidemic plaguing tens of thousands of New York’s in the winter months. To fulfill this mission, data obviously plays a major role and we have repeatedly asked - and been asked - a lot of questions: just how bad is the heating situation for New Yorkers? Is this an ongoing problem? Which areas does this heating crisis effect the most? What boroughs submit the most heating complaints? How has the heating situation changed from year-to-year? Are there any other trends we see?
 
 We start all of our analyses with a question and this often leads to a lot of other questions. When we have compiled a list and a simple Google search doesn’t suffice, then we start to dig in. With our questions comes the need for data and, oftentimes, even more data on top of that. Of course, at the heart of all of our analyses is data. 
 
-
+<a name="data"/>
 ## Data
 
 At the heart of every analysis - whether it’s a Heat Seek’s or a university or a Fortune 500 company - obtaining data is key. A decade ago, one anecdote comments, someone remarked that ‘data is the new oil.’ More recently, another individual laughed at that statement. ‘Data is the new soil,’ he countered. Data is essential for answering questions and the world is drowning in it. We know we need data to answer our questions, but how do we find the right data? 
@@ -28,8 +34,10 @@ Obviously, data is key when trying to get to the heart of a problem or answering
 
 Here we will talk about each data collection method and give examples of how we proceeded on each. 
 
-###Open Data Portals
+<a name="opendata"/>
+###Open Data
 
+<a name="nyc311data"/>
 ####New York City 311 Data
 
 *1. Using NYC Open Data, we first search for "311 Service Requests from 2010-2015."*
@@ -82,6 +90,7 @@ Additionally, we can see the overall size of the file using the ls command with 
 > -rw-r-----@ 1 jesse  staff   892M Jul 30 12:03 311_Service_Requests_from_2010_to_Present.csv
 ```
 
+<a name="apis"/>
 ###APIs
 
 ####Weather Underground
