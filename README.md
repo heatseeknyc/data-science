@@ -24,28 +24,29 @@ We start all of our analyses with a question and this often leads to a lot of ot
 <a name="data"/>
 ## Data
 
-At the heart of every analysis - whether it’s a Heat Seek’s or a university or a Fortune 500 company - obtaining data is key. A decade ago, one anecdote comments, someone remarked that ‘data is the new oil.’ More recently, another individual laughed at that statement. ‘Data is the new soil,’ he countered. Data is essential for answering questions and the world is drowning in it. We know we need data to answer our questions, but how do we find the right data? 
+At the heart of every analysis - whether it is Heat Seek’s or a study at a university or a confidential report from within a Fortune 500 company - obtaining data is key. A quick search on Google for the phrase "data is the new oil" will illustrate how important data is, and the seriousness with which data scientists, analysts, executives, and everyone takes it. Data is important. 
 
-In New York City, as in many larger U.S. cities now, residents can file a 311 complaint for non-emergency services. Heating complaints are filed in this way. Thankfully, in NYC this dataset is available to the public and is used by city officials as one of several sources for the measurement of the performance of city services. Since heating complaints for residents of New York are accessible and formatted in a way that makes it very easy for us to start our analysis, NYC’s Open Data portal is where we often start. Specifically, the 311 dataset is key to many of our questions. 
+At a higher level, there are three ways Heat Seek, and many individuals and organizations, obtain data:
 
-Obviously, data is key when trying to get to the heart of a problem or answering questions. At Heat Seek, there are three main ways that we collect data: 
-
-*Open Source data
+*Open Source
 *APIs
-*Scraping web sites
+*Scraping w sitese
 
-
-Here we will talk about each data collection method and give examples of how we proceeded on each. 
+To begin with, let's start with Open Data. 
 
 <a name="opendata"/>
 ###Open Data
 
+In New York City, as in many larger U.S. cities now, residents can file a 311 complaint for non-emergency services and the data has proven to be valuable. City officials, for instance, use the 311 dataset as one of several sources for the measurement of the performance of public services. What's more, NYC even allows the public to have complete access to this dataset and, because of this reason, NYC’s Open Data portal - where the 311 dataset is updated daily - is where we often start. This dataset is just one source of information we use at Heat Seek. 
+
 <a name="nyc311data"/>
 ####New York City 311 Data
 
+To obtain the latest NYC 311 dataset, follow these steps. 
+
 *1. Using NYC Open Data, we first search for "311 Service Requests from 2010-2015."*
 
-A result should be returned. Selecting it shows that this is a large dataset: five years of complaint data, millions of rows, dozens of columns, and close to two hundred complaint types. Since our initial questions do not require every bit of information within this dataset, we can narrow down our scope. Before downloading this data, the Open Data portal allows us to filter by a specific column; for example, Complaint Type:
+A result for '311 Service Requests from 2010-2015' will be returned and selecting it shows that this is a large dataset: five years of complaint data, millions of rows, dozens of columns, and close to two hundred complaint types. Since our initial questions do not require every bit of information within this dataset, we can narrow down our scope. Before downloading this data, the Open Data portal allows us to filter by a specific column; for example, Complaint Type:
 
 
 *2. We are interested in complaint types that deal with heating, so we can remove a lot of these rows before we download the dataset by filtering down to heat-specific complaints.* 
