@@ -36,7 +36,9 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
         - [Creating the complaints table and loading the data](#postgrescomplaints)
         - [Querying and asking questions of the data](#postgresquerying)
         - [Exporting from PostgreSQL](#postgresexporting)
-        - [Usefule PostgreSQL commands](#postgrescommands)
+- [Appendix](#appendix)
+    - [Useful R commands](#rcommands)
+    - [Useful PostgreSQL commands](#postgrescommands)
 - [Licensing](#licensing)
         
   
@@ -131,9 +133,9 @@ Many of the examples below revolve around the 311 dataset. This dataset is avail
 
 One dataset we use and merge with other data is Weather Underground’s historical temperature data. Weather Underground has a number of temperature sensors throughout the city and an API which allows us to retrieve this information. 
 
-Within the our Github data-science repo and in the examples folder is a Python module called wunderground.py 
+Within the examples folder of this repo is a Python module called wunderground.py 
 
-When run, wunderground.py will retrieve the average temperature - in fahrenheit - between a start and end date. That date and temp for that day is then printed to the screen e.g. 
+When run with a set of flags, wunderground.py will retrieve the average temperature between a start and end date. That date and temp for that day is then printed to the screen e.g. 
 
 ```
 2015-09-05,72.6407407407
@@ -159,7 +161,7 @@ Note: in order to make calls to the API and retrieve historical temperatures you
 <a name="citysdk"/>
 ####CitySDK
 
-TODO
+CitySDK is a project developed by the United States Census Bureau that provides a user-friendly “toolbox” for civic hackers to connect local and national public data. Heat Seek utilizes CitySDK to collect demographic data at the city-level and merge it in with our other datasets to gain a better understanding of the city's landscape as it relates to heating. More information on CitySDK can be found out: https://uscensusbureau.github.io/citysdk
 
 <a name="mergingdata"/>
 ###Merging Data
