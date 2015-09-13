@@ -169,7 +169,11 @@ CitySDK is a project developed by the United States Census Bureau that provides 
 <a name="scraping"/>
 ###Scraping
 
-Another way that Heat Seek obtains data is through web scraping. Python libraries such as Beautiful Soup allow us to collect information from various sites and this data can then be merged in with our other datasets. One example site that Heat Seek 'scraped' was the 'Geographic Online Address Translator' or [GOAT](http://a030-goat.nyc.gov/goat/Default.aspx). 
+Another way that Heat Seek obtains data is through web scraping. Python libraries such as Beautiful Soup allow us to collect information from various sites and this data can then be merged in with our other datasets. 
+
+<a name="BIN"/>
+#### Building Information Numbers - BIN
+One example site that Heat Seek 'scraped' was the 'Geographic Online Address Translator' or [GOAT](http://a030-goat.nyc.gov/goat/Default.aspx). 
 
 This site contains a lot of useful information when a user is submits an address through the form. Data such as BIN, district numbers and other building-level information is returned. But this information is not readily available unless the form is submitted, so a Python script (bs_bin.py in the examples directory) was created to assist in gather this information. 
 
