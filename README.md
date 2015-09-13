@@ -22,10 +22,19 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
         - [Verifying the Numbers](#verifying)
         - [R Example #2: Correlations between median income and complaint counts (by zip code)](#rexample2)
     - [Cleaning and Massaging Data: Tools and Techniques](#cleaning)
+        - [awk](#awk)
+        - [tail](#tail)
+        - [sed](#sed)
+        - [wc](#wc)
     - [Loading and Analyzing Data Using PostgreSQL](#loadingpostgres)
         - [PostgreSQL Example #1: Loading, Querying and Exporting](#postgresex1)
         - [Setting up PostgreSQL for the first time](#postgresfirst)
         - [Creating the Heat Seek Database](#postgresdb)
+        - [Creating the complaints table and loading the data](#postgrescomplaints)
+        - [Querying and asking questions of the data](#postgresquerying)
+        - [Exporting from PostgreSQL](#postgresexporting)
+        - [Usefule PostgreSQL commands](#postgrescommands)
+        
   
 <a name="overview"/>
 ## Overview
@@ -402,6 +411,7 @@ Using R, we can first load the entire 311 dataset of heating complaints into R, 
 
 Note that we are temporarily using ; as a delimiter. This is because there can be commas within some of the fields, and issues can arise with the next step when using awk. 
 
+<a name="awk"/>
 ####awk
 
 Now let’s use awk to grab the columns we are going to load into our database:
@@ -412,6 +422,7 @@ awk -F "\"*;\"*" '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$24,$25}' OFS="," 31
 
 We already removed our header when we did the export from R. If we had not, though, there are ways we can do this from the command line. One method would be to use the tail command.
 
+<a name="tail"/>
 ####tail
 
 ```
@@ -421,6 +432,7 @@ tail -n +2 311_Heat_Seek_Subset.csv > 311_Heat_Seek_Subset_No_Header.csv
 tail -n +2 is saying “give me the ‘end’ of the file, starting at the second line.”
 file.txt is our input and we redirect the output to file.stdout
 
+<a name="sed"/>
 ####sed
 
 Additionally, we can use sed to remove the first line of the file (i.e. the header). One such example is as follows:
@@ -431,6 +443,7 @@ sed '1d' 311_Heat_Seek_Subset.csv > 311_Heat_Seek_Subset_No_Header.csv
 
 Both awk and sed are powerful - and fast - command line tools and we use them often when performing data analysis at Heat Seek. These commands allow us to quickly clean and massage our data so that we can load into a database or application without issues.  
 
+<a name="wc"/>
 ####wc 
 
 From the command line, we can take a look at the total number of rows (from 2010 until 2015):
@@ -508,7 +521,7 @@ Remove all but the following 13 columns:
  community_board  
  borough          
 ```
-     
+<a name="postgrescomplaints"/>
 ####Creating the complaints table and loading the data
 
 *1. Create the heatseek database and switch to it:*
@@ -549,7 +562,7 @@ COPY 1165724
 
 You will need to change the location of the 311_Heat_Seek_Subset.csv location to match the location of your dataset.
 
-
+<a name="postgresquerying"/>
 ####Querying and asking questions of the data
 
 Ok, if all goes well and the data loads into the table, we can now begin to extract the data and information about it from the psql terminal window. 
@@ -637,7 +650,7 @@ heatseek=# select borough, COUNT(id) FROM complaints WHERE created_date >= '2014
 ```
 
 
-
+<a name="postgresexporting"/>
 ####Exporting from PostgreSQL
 
 In our next post on methodology and the steps we have taken at Heat Seek in our analyses, we’ll be looking at how we have created visualizations of our data. We often need to export our data from PostgreSQL in order to do that. 
@@ -657,6 +670,7 @@ Another example would be exporting all winter 2014-2015 rows where the complaint
 heatseek=# COPY (SELECT * FROM complaints WHERE created_date >= '2014-10-01' AND created_date <= '2015-05-31' AND borough LIKE '%BROOKLYN%') To '/Users/jesse/Desktop/2014_2015_brooklyn_complaints.csv' WITH CSV;
 ```
 
+<a name="postgrescommands"/>
 ####Useful PostgreSQL Commands
 
 If you are not familiar with PostgreSQL, here are some useful commands:
