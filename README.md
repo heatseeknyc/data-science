@@ -2,7 +2,10 @@
 
 This repository hosts all-things-data for Heat Seek and includes our methodologies, datasets, and information on the data visualization tools and techniques we utilize when performing data analysis. 
 
-# Data Analysis and Methodology - Tools, Techniques and Technologies - Part I
+## Data Analysis and Methodology
+
+### Tools, Techniques and Technologies - Part I
+
 - [Overview](#overview) 
 - [Data](#data) 
  - [Open Data](#opendata) 
