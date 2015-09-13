@@ -761,4 +761,6 @@ COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY create
 
 ## Licensing
 
-Note: This project and all of the subsequent guides, code,  are licensed under the terms of the MIT license. For more information, please visit https://opensource.org/licenses/MIT
+This application is MIT Licensed. See [LICENSE](https://github.com/heatseeknyc/data-science/blob/master/LICENSE) for details. 
+
+Additional information on the MIT License is available at https://opensource.org/licenses/MIT
