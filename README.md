@@ -716,7 +716,7 @@ heatseek=# COPY (SELECT * FROM complaints WHERE created_date >= '2014-10-01' AND
 ##Appendix
 
 <a name="postgrescommands"/>
-###Useful PostgreSQL Commands
+###Useful PostgreSQL 
 
 If you are not familiar with PostgreSQL, here are some useful commands:
 
@@ -763,9 +763,18 @@ Export all rows with created_date > 2015-01-01:
 ```
 COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY created_date ASC) To '/Users/jesse/Desktop/2015_complaints.csv' WITH CSV;
 ```
+<a name="pythoncommands"/>
+###Useful Python 
+
+- [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/) is an excellent library for scraping web pages. 
+
+- [matplotlib](http://matplotlib.org/) is a python 2D plotting library which is useful when visualizating data and quickly prototyping. 
+
+- [pandas](http://pandas.pydata.org/) is a library providing high-performance, easy-to-use data structures and data analysis tools. Highly recommended. Check out [Wes McKinney's tutorial](https://www.youtube.com/watch?v=w26x-z-BdWQ) as well. 
+
 
 <a name="rcommands"/>
-###Useful R Commands
+###Useful R 
 
 <a name="resources"/>
 ###Useful Resources
