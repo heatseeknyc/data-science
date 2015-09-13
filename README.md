@@ -19,12 +19,12 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
 - [Data Tools and Techniques for Extracting, Transforming, and Loading](#datatools)
     - [Loading and Analyzing Data Using R](#rdata)
         - [R Example #1: Total heating complaint counts by winter seasons](#rexample1)
-            - [Plotting a scatterplot using ggplot](#rscatterplot)
-            - [Curve fitting](#rcurvefit)
         - [Verifying the Numbers](#verifying)
         - [R Example #2: Correlations between median income and complaint counts (by zip code)](#rexample2)
+            - [Plotting a scatterplot using ggplot](#rscatterplot)
+            - [Curve fitting](#rcurvefit)
     - [Cleaning, Massaging and Knowing Your Data](#cleaning)
-        - [Use R!](#usingr)
+        - [Using R](#usingr)
         - [awk](#awk)
         - [tail](#tail)
         - [sed](#sed)
@@ -37,8 +37,11 @@ This repository hosts all-things-data for Heat Seek and includes our methodologi
         - [Querying and asking questions of the data](#postgresquerying)
         - [Exporting from PostgreSQL](#postgresexporting)
 - [Appendix](#appendix)
-    - [Useful R commands](#rcommands)
-    - [Useful PostgreSQL commands](#postgrescommands)
+    - [Useful Command-Line Tools](#clicommands)
+    - [Useful PostgreSQL](#postgrescommands)
+    - [Useful Python](#pythoncommands)
+    - [Useful R](#rcommands)
+    - [Useful Resources](#resources)
 - [Licensing](#licensing)
         
   
@@ -412,7 +415,7 @@ With our Heat Seek data, we want only a subset of columns to load into Postgres 
 One useful technique to quickly convert a csv file into a semi-colon delimited file involves R. In fact, R has a number of useful commands for cleaning data and does a great job of handling 'dirty' data as well, but we will talk about that at another point. 
 
 <a name="usingr"/>
-####Use R!
+####Using R
 Using R, first load the entire 311 dataset of heating complaints into R, and then output a new csv file using a semicolon ; as a delimiter:
 
 ```
@@ -698,8 +701,11 @@ Another example would be exporting all winter 2014-2015 rows where the complaint
 heatseek=# COPY (SELECT * FROM complaints WHERE created_date >= '2014-10-01' AND created_date <= '2015-05-31' AND borough LIKE '%BROOKLYN%') To '/Users/jesse/Desktop/2014_2015_brooklyn_complaints.csv' WITH CSV;
 ```
 
+<a name="appendix"/>
+##Appendix
+
 <a name="postgrescommands"/>
-####Useful PostgreSQL Commands
+###Useful PostgreSQL Commands
 
 If you are not familiar with PostgreSQL, here are some useful commands:
 
@@ -746,6 +752,12 @@ Export all rows with created_date > 2015-01-01:
 ```
 COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY created_date ASC) To '/Users/jesse/Desktop/2015_complaints.csv' WITH CSV;
 ```
+
+<a name="rcommands"/>
+###Useful R Commands
+
+<a name="resources"/>
+###Useful Resources
 
 ## Licensing
 
