@@ -629,30 +629,44 @@ If you are not familiar with PostgreSQL, here are some useful commands:
 
 List all databases:
 
+```
 \l 			
+```
 
 Use the ‘heatseek’ database:
 
+```
 use heatseek 	
+```
 
 List all tables:
 
+```
 \d 			
+```
 
 List columns in table:
 
+```
 \d <table> 
+```
 
-e.g. \d complaints
+e.g. ```\d complaints```
 
 Export database (run from command line, not from within psql):
 
+```
 pg_dump -U user -d database > blah.sql 
+```
 
 Import a .sql dump:
 
+```
 \i foo.sql 
+```
 
 Export all rows with created_date > 2015-01-01:
 
+```
 COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY created_date ASC) To '/Users/jesse/Desktop/2015_complaints.csv' WITH CSV;
+```
