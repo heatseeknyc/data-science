@@ -518,7 +518,7 @@ The man page for the specific command - the manual - will then come up.
 ###Loading and Analyzing Data Using PostgreSQL
 
 <a name="postgresex1"/>
-####PostgreSQL Example #1: Loading, Querying and Exporting
+#####PostgreSQL Example #1: Loading, Querying and Exporting
 
 As we mentioned before, we use a variety of techniques, tools and technologies to get to the heart of the data, to find answers to our questions. While R is our primary language for analyzing our data, databases such as PostgreSQL are invaluable tools to help us quickly load in and select subsets of data. We can also use PostgreSQL to merge datasets as well, as we’ll show below. 
 
@@ -527,7 +527,7 @@ First, we need data. Follow the steps in The Data section above.
 You will want to first download the 311_Service_Requests_from_2010_to_Present.csv file.
 
 <a name="postgresfirst"/>
-####Setting up PostgreSQL for the first time
+#####Setting up PostgreSQL for the first time
 
 PostgreSQL is a type of Relational Database Management System (RDMS) and what we primarily use at Heat Seek to store much of our data. 
 
@@ -548,7 +548,7 @@ You should be logged into your local instance. You now have PostgreSQL installed
 Note: if you have any issues getting PostgreSQL up and running, there are a number of great resources online. Hopefully these 
 
 <a name="postgresdb"/>
-####Creating the Heat Seek Database 
+#####Creating the Heat Seek Database 
 
 Now that you have PostgreSQL installed, we can create our Heat Seek instance and load in our data. 
 
@@ -584,7 +584,7 @@ Remove all but the following 13 columns:
  borough          
 ```
 <a name="postgrescomplaints"/>
-####Creating the complaints table and loading the data
+#####Creating the complaints table and loading the data
 
 *1. Create the heatseek database and switch to it:*
 
@@ -625,7 +625,7 @@ COPY 1165724
 You will need to change the location of the 311_Heat_Seek_Subset.csv location to match the location of your dataset.
 
 <a name="postgresquerying"/>
-####Querying and asking questions of the data
+#####Querying and asking questions of the data
 
 Ok, if all goes well and the data loads into the table, we can now begin to extract the data and information about it from the psql terminal window. 
 
@@ -713,7 +713,7 @@ heatseek=# select borough, COUNT(id) FROM complaints WHERE created_date >= '2014
 
 
 <a name="postgresexporting"/>
-####Exporting from PostgreSQL
+#####Exporting from PostgreSQL
 
 In our next post on methodology and the steps we have taken at Heat Seek in our analyses, we’ll be looking at how we have created visualizations of our data. We often need to export our data from PostgreSQL in order to do that. 
 
