@@ -189,7 +189,7 @@ Once we have retrieved the temperatures for a given historical date range, we ca
 
 For example, if our historical temperature were stored in a table called temps an example SELECT statement would be:
 ```
-SELECT * FROM complaints c, temps t WHERE created_date::date = t.date;
+SELECT * FROM complaints c, temps t WHERE c.created_date::date = t.date;
 ```
 Note: Casting was done in this example to illustrate the complaints created_at column is a datetime, and the temps date column would most likely be of type date. 
 
@@ -445,23 +445,35 @@ Note that we are temporarily using ; as a delimiter. This is because there can b
 <a name="awk"/>
 ####awk
 
-Now let’s use awk to grab the columns we are going to load into our database:
+```awk``` is a useful command-line tool and extremely versatile programming language for working on files. Rather than using GUI-based programs to work on files - programs like Excel - ```awk``` can help us quickly and effectively parse out information.
+
+As an example, let's use awk to grab the columns we are going to load into our database:
 
 ```
 awk -F "\"*;\"*" '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$24,$25}' OFS="," 311_Service_Requests_from_2010_to_Present.csv > 311_Heat_Seek_Subset.csv
 ```
 
-We already removed our header when we did the export from R. If we had not, though, there are ways we can do this from the command line. One method would be to use the tail command.
 
 <a name="tail"/>
-####tail
+####tail/head
+
+We already removed our header when we did the export from R. If we had not, though, there are ways we can do this from the command line. One method would be to use the ```tail``` command.
 
 ```
 tail -n +2 311_Heat_Seek_Subset.csv > 311_Heat_Seek_Subset_No_Header.csv
 ```
 
-tail -n +2 is saying “give me the ‘end’ of the file, starting at the second line.”
-file.txt is our input and we redirect the output to file.stdout
+tail -n +2 is saying “give me the ‘end’ of the file, starting at the second line.” file.txt is our input and we redirect the output to file.stdout
+
+Additionally, we can use ```tail``` to look at the last n lines of a file. To output the last 10 lines of file.txt, we can run the following in terminal:
+
+```
+tail -n 10 file.txt
+```
+
+Similiar to ```tail``` is the ```head``` command. With ```head``` we can output starting from the beginning of a file, rather than the end. 
+
+For more information on both of these commands, use ```man tail``` and ```man head``` respectively. 
 
 <a name="sed"/>
 ####sed
@@ -472,7 +484,7 @@ Additionally, we can use sed to remove the first line of the file (i.e. the head
 sed '1d' 311_Heat_Seek_Subset.csv > 311_Heat_Seek_Subset_No_Header.csv
 ```
 
-Both awk and sed are powerful - and fast - command line tools and we use them often when performing data analysis at Heat Seek. These commands allow us to quickly clean and massage our data so that we can load into a database or application without issues.  
+sed - which stands for Stream EDitor - is a Unix utility that parses and transforms text, using a simple, compact programming language. Both ```awk``` and ```sed``` are powerful - and fast - command line tools and we use them often when performing data analysis at Heat Seek. These commands allow us to quickly clean and massage our data so that we can load into a database or application without issues.  
 
 <a name="wc"/>
 ####wc 
@@ -483,6 +495,8 @@ From the command line, we can take a look at the total number of rows (from 2010
 > wc -l 311_Heat_Seek_Subset.csv                    
  1165724 output.csv
 ```
+
+```wc``` - while not as powerful and flexible as tools like ```awk``` and ```sed``` - is still useful when working with files. We can quickly check to see whether or not the expected number of rows have been parsed/excluded/included based on previous tools and commands. 
 
 <a name="man"/>
 ####man pages
