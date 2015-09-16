@@ -518,7 +518,7 @@ The man page for the specific command - the manual - will then come up.
 ###Loading and Analyzing Data Using PostgreSQL
 
 <a name="postgresex1"/>
-#####PostgreSQL Example #1: Loading, Querying and Exporting
+####PostgreSQL Example #1: Loading, Querying and Exporting
 
 As we mentioned before, we use a variety of techniques, tools and technologies to get to the heart of the data, to find answers to our questions. While R is our primary language for analyzing our data, databases such as PostgreSQL are invaluable tools to help us quickly load in and select subsets of data. We can also use PostgreSQL to merge datasets as well, as we’ll show below. 
 
