@@ -1,11 +1,19 @@
+# bs_bin.py
+# Author: Jesse Fish
+# 
+# Description: Visit NYC 'GOAT' site, using an address within the URL, 
+# and grab BIN for each building. Data then merged into dataset for 
+# use with GIS/shapefile maps for visualization. 
+
 from bs4 import BeautifulSoup
 import urllib
 import time
 
+# open list of brooklyn addresses that have made heat complaints in last 5 years
 with open('2010_2015_brooklyn_complaints.csv') as in_file:
 	for line in in_file:
 		try:
-			
+			# read in line, split based on , delimiter
 			parts = line.split(",") 
 			indexEnd = parts[0].index(" ")
 			
@@ -28,5 +36,5 @@ with open('2010_2015_brooklyn_complaints.csv') as in_file:
 		except:
 			print "error"
 			
-		# wait 3 seconds before hitting url again, error or not
+		# wait 3 seconds before hitting url again so site is not overloaded
 		time.sleep(3)
