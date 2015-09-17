@@ -35,8 +35,9 @@
             - [Querying and asking questions of the data](#postgresquerying)
             - [Exporting from PostgreSQL](#postgresexporting)
 - [Appendix](#appendix)
-    - [Useful Command-Line Tools](#clicommands)
+    - [Useful Command-Line Tools](#usefulcommandlinetools)
     - [Useful PostgreSQL](#postgrescommands)
+        -[Helpful Commands](#postgreshelpfulcommands)
     - [Useful Python](#pythoncommands)
     - [Useful R](#rcommands)
     - [Other Useful Resources](#resources)
@@ -202,7 +203,7 @@ Note: Casting was done in this example to illustrate the complaints created_at c
 In an [analysis earlier](http://heatseeknyc.tumblr.com/post/122874427185/a-persistent-and-predictable-problem) this summer, we merged complaint count data with weather data and then looked at the peaks and valleys between the two metrics. There was an obvious, inverse relationship but it also seemed that when temperatures dropped rapidly, complaints would also increase rapidly. In the second visualization of this blog post, it’s as though individuals get used to being cold and only call when the temperature drops suddenly again.
 
 <a name="datatools"/>
-##Data Tools and Techniques: Extract, Transform, Load
+##Data Tools and Techniques Using ETL (Extract, Transform, Load)
 
 Now that we we our initial dataset we’ll need some tools to start our analysis. Many data organizations do not use any one tool, technique or technology, and Heat Seek is no different. Languages such as R and Python are powerful when analyzing data and a databases such as PostgreSQL can help us quickly load, select and merge datasets. Additionally, we also utilize data visualization tools and libraries. These include Tableau, Spotfire, Adobe Illustrator, and libraries such as D3.js, Python's matplotlib, and R’s ggplot2. In this document we will focus on data; data visualization will be covered separately.
 
@@ -446,7 +447,7 @@ Using R, first load the entire 311 dataset of heating complaints into R, and the
 ```
 
 
-Note that we are temporarily using ; as a delimiter. This is because there can be commas within some of the fields, and issues can arise with the next step when using awk. 
+Note that we are temporarily using ; as a delimiter. R is helpful in cleaning in data, especially when there are commas within ields that can cause issues when loading and analyzing the data during other steps. 
 
 <a name="awk"/>
 ####awk
@@ -740,9 +741,18 @@ heatseek=# COPY (SELECT * FROM complaints WHERE created_date >= '2014-10-01' AND
 <a name="appendix"/>
 ##Appendix
 
+<a name="usefulcommandlinetools"/>
+###Useful Command-Line Tools
+
+As mentioned [above](#cleaning), there are a number of useful command-line tools and utilities for cleaning and massaging data. 
+
 <a name="postgrescommands"/>
 ###Useful PostgreSQL 
 
+PostgreSQL is an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance. As a database server, its primary function is to store data securely, supporting best practices, and to allow for retrieval at the request of other software applications. At Heat Seek, PostgreSQL - or simply Postgres - is the primary database we use to store and retrieve data.
+
+<a name="postgreshelpfulcommands"/>
+####Helpful Commands
 If you are not familiar with PostgreSQL, here are some useful commands:
 
 List all databases:
@@ -811,7 +821,7 @@ COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY create
 <a name="resources"/>
 ###Other Useful Resources
 
-- 
+- [Coursera Data Science Courses](https://www.coursera.org/specializations/jhudatascience) can aid in gaining a complete understanding of data science techniques and tools, including R and exploratory data analysis. 
 
 ## Licensing
 
