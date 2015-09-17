@@ -189,7 +189,7 @@ Another way that Heat Seek obtains data is through web scraping. Python librarie
 #### Building Information Numbers - BIN
 One example site that Heat Seek 'scraped' was the 'Geographic Online Address Translator' or [GOAT](http://a030-goat.nyc.gov/goat/Default.aspx). 
 
-This site contains a lot of useful information when a user is submits an address through the form. Data such as BIN, district numbers and other building-level information is returned. But this information is not readily available unless the form is submitted, so a Python script (bs_bin.py in the examples directory) was created to assist in gather this information. 
+This site contains a lot of useful information when a user is submits an address through the form. Data such as BIN, district numbers and other building-level information is returned. But this information is not readily available unless the form is submitted. Since information can be submitted through the URL, a Python script - bs_bin.py in the src directory - was created to assist in gathering this information. The BIN data was 'scraped' from each page after an address was entered in the URL by the script.
 
 <a name="mergingdata"/>
 ###Merging Data
