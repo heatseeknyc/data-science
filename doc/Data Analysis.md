@@ -333,21 +333,25 @@ According to the analysis we’ve built so far, we can see that, between October
 <a name="verifying"/>
 ###Verifying the Numbers
 
-But is this information we have found correct? It turns out that the NYC Housing Preservation & Development (HPD) publishes their official total counts on their site. 
+But is this information we have found correct? It turns out that the [NYC Housing Preservation & Development (HPD)](http://www1.nyc.gov/site/hpd/index.page) publishes their [official total counts](http://www1.nyc.gov/site/hpd/renters/important-safety-issues-heat-hot-water.page) on their site. 
 
+For the 2014-2015 winter season, HPD published a heating complaint count of 231,156. Using R and the steps above, we came to a total count of 230,702. For the 2013-2014 winter season, HPD published a heating complaint count of 212,563 and our complaint count is 212,669.
 
+So, our total count - based on the public 311 data - compared to the count of official data is between 99.8 and 99.99% correct. We’re off but this could be due to any number or reasons and, given the number of rows, this is an acceptable margin of error.
 
-For the 2014-2015 winter season, HPD published a count of 231,156. Using R and the steps above, we came to a total count of 230,702. For the 2013-2014 winter season, HPD shows a count of 212,563 and our complaint count is 212,669.
+Note: In a section below we walkthrough our methodology while using PostgreSQL. Using the database method, we also see the same numbers as we have seen with R. This illustrates that there has not been an issue with our technique or tools, but possibly with the data published on the Open Data site site. It's possible that some rows are missing from our open data source, for instance. Regardless, this margin of error is extremely small and acceptable. For more information on best practices and acceptable margins of error, you can check out Stanford's ["Statistical Perspectives and Recommendations"](http://bps.stanford.edu/?page_id=367) 
 
-So, our total count - based on the public 311 data - compared to the count of official data is 99.8% correct. We’re off by about .2% but this could be due to any number or reasons and is an acceptable margin of error.
+We can be confident in our numbers: we’ve just used R to summarize the data to find the total number of heat complaints for the 2014-2015 season, and below we will use PostgreSQL. We’re on the right track, which is great news. Now we can continue and expand to look at counts for previous winters as well.
 
-Note: Using PostgreSQL we see the same numbers as we have seen with R. This shows that there has not been an issue with our technique or tools, but possibly with the data published on the Open Data site site. 
+In fact, in our [June 30th](http://heatseeknyc.com/blog) post we broke down the total number of heating complaints by each year to show how counts have, overall, increased over the last five years. We also illustrated this using a data visualization within the blog posting as well. 
 
-This is a very low margin of error, so we can be confident in our numbers: we’ve just used R to summarize the data to find the total number of heat complaints for the 2014-2015 season. We’re on the right track. We can continue down the same path and look at counts for previous winters as well.
+Ok, let's take stock:
 
-In fact, in our June 30th post we broke down these complaints by each year to show how counts have, overall, increased over the last five years. This is illustrated in the visualization below: 
+ - We have a reliable data source, which we've retrieved from NYC's Open Data portal
+ - We then utilized the R language to load and perform a simple analysis of our data
+ - Lastly, we have verified that our numbers look correct
 
-So now we have seen an initial example using R and what steps we can take to find out the fundamentals of the heating situation in New York City. Let’s take a look at a little more complex example using R next. 
+Now let’s take a look at a little more complex example using R.
 
 
 <a name="rexample2"/>
