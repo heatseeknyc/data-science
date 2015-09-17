@@ -42,6 +42,7 @@
     - [Useful R](#rcommands)
         - [Helpful Commands](#rhelpfulcommands)
     - [Other Useful Resources](#resources)
+    - [Contact](#contact)
 - [Licensing](#licensing)
         
   
@@ -823,6 +824,12 @@ COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY create
 ###Other Useful Resources
 
 - [Coursera Data Science Courses](https://www.coursera.org/specializations/jhudatascience) can aid in gaining a complete understanding of data science techniques and tools, including R and exploratory data analysis. 
+
+
+<a name="contact"/>
+###Contact
+
+For more information or if you have any questions, feel free to contact Jesse Fish at jessefish@gmail.com 
 
 ## Licensing
 
