@@ -204,21 +204,25 @@ Note: Casting was done in this example to illustrate the complaints created_at c
 
 In an [analysis earlier](http://heatseeknyc.tumblr.com/post/122874427185/a-persistent-and-predictable-problem) this summer, we merged complaint count data with weather data and then looked at the peaks and valleys between the two metrics. There was an obvious, inverse relationship but it also seemed that when temperatures dropped rapidly, complaints would also increase rapidly. In the second visualization of this blog post, it’s as though individuals get used to being cold and only call when the temperature drops suddenly again.
 
+There are many ways to merge data and a database such as PostgreSQL is just one. 
+
 <a name="datatools"/>
 ##Data Tools and Techniques Using ETL (Extract, Transform, Load)
 
-Now that we we our initial dataset we’ll need some tools to start our analysis. Many data organizations do not use any one tool, technique or technology, and Heat Seek is no different. Languages such as R and Python are powerful when analyzing data and a databases such as PostgreSQL can help us quickly load, select and merge datasets. Additionally, we also utilize data visualization tools and libraries. These include Tableau, Spotfire, Adobe Illustrator, and libraries such as D3.js, Python's matplotlib, and R’s ggplot2. In this document we will focus on data; data visualization will be covered separately.
+Now that we we our initial dataset we’ll need some tools to start our analysis and answer some questions. Many data organizations do not use any one tool, technique or technology, and Heat Seek is no different. Languages such as R and Python are powerful when analyzing data and a databases such as PostgreSQL can help us quickly load, select and merge datasets. Additionally, we also utilize data visualization tools and libraries. These include Tableau, Spotfire, Adobe Illustrator, and libraries such as D3.js, Python's matplotlib, and R’s ggplot2. In this document we will focus on data; data visualization will be covered separately within the [Data Visualizations](Data Visualizations.md) section of this repository.
 
 To begin with, let’s start with one of the most valuable weapons in data scientist's toolbox: R
 
 <a name="rdata"/>
 ###Loading and Analyzing Data Using R
 
-You should first have [R installed](https://www.r-project.org/). R will work with a variety of operating systems including Windows, OSX and Linux. Also, [R Studio](https://www.rstudio.com/products/rstudio/download/) is a great, supplemental tool for R code development as well. 
+R is a language that has been used by statisticians and scientists for decades. With the rise of Big Data and the role of Data Scientist, it is becoming more popular and is considered one of the essential languages to know (along with Python, depending on how you ask). 
 
-R is very simple to set up so once you have it installed you should be able to start following these steps. 
+To use R, you should first have the [R development environment installed](https://www.r-project.org/). R will work with a variety of operating systems including Windows, OSX and Linux. Also, [R Studio](https://www.rstudio.com/products/rstudio/download/) is a great, supplemental tool for R code development as well. 
 
-Note: If you are not familiar with R, there are some great tutorials online. Additionally, Coursera offers some classes as well. 
+R is very simple to set up so once you have it installed you should be able to start following the steps outlined here to reproduce some of Heat Seek's analyses. 
+
+Note: If you are not familiar with R, there are some great tutorials online. Additionally, Coursera offers some classes as well. The [Useful R](#rcommands) section of this tutorial has more information on these resources.
 
 <a name="rexample1"/>
 ####R Example #1: Total heating complaint counts by winter seasons
