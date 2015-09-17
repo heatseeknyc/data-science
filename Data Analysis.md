@@ -37,9 +37,10 @@
 - [Appendix](#appendix)
     - [Useful Command-Line Tools](#usefulcommandlinetools)
     - [Useful PostgreSQL](#postgrescommands)
-        -[Helpful Commands](#postgreshelpfulcommands)
+        - [Helpful Commands](#postgreshelpfulcommands)
     - [Useful Python](#pythoncommands)
     - [Useful R](#rcommands)
+        - [Helpful Commands](#rhelpfulcommands)
     - [Other Useful Resources](#resources)
 - [Licensing](#licensing)
         
