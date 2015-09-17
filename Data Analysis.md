@@ -1,11 +1,12 @@
 ## Data Analysis and Methodology
 
-### Tools, Techniques and Technologies - Part I
+### Tools, Techniques and Technologies 
 
 - [Overview](#overview) 
 - [Data](#data) 
     - [Open Data Sources](#opendata) 
-        - [NYC 311 Data](#nyc311data) 
+        - [NYC 311 Data](#nyc311data)
+             - [Obtaining the data](#obtainingdata)
     - [APIs](#apis)
         - [Weather Underground](#weatherunderground)
         - [CitySDK](#citysdk)
@@ -45,7 +46,7 @@
 <a name="overview"/>
 ## Overview
 
-At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, we deploy custom sensors to track an apartment's indoor temperature and record the number of violations per hour. Data plays a major role with our mission internally, of course, but we also consumer and analyze a good amount of external data as well. 
+At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, we deploy custom sensors to track a a tenant's apartment's indoor temperature and then record the number of violations per hour. In addition to the hardware aspect of our mission, data plays a major role as well. In addition to our internal data, we spend a lot of time collecting and analyzing external data, and all of this starts with questions.
 
 We have repeatedly asked - and been asked - many questions related to our mission, including: 
 
@@ -61,36 +62,39 @@ Ultimately, at the heart of all of our analyses is rich - and useful - datasets.
 <a name="data"/>
 ## Data
 
-Every analysis requires data. With the explosion of 'Big Data,' a variety of information, in many forms and structures, is available online. However, to perform any meaningful analysis, good data are needed and collecting trustworthy data is actually more difficult than many people realize. 
+Every analysis requires data. Within the last decade, there has been an explosion of Big Data: a substantially sized variety of information, that comes in many forms and structures. While massive datasets are available online, obtaining answers from this data is not trivial. To perform any meaningful analysis, good data are needed and collecting trustworthy data is actually more difficult than many think.
 
-At a high level, there are three ways Heat Seek obtains data:
+At a high level, there are three ways Heat Seek collects meaningful and useful data:
 
 * Open Data Sources
 * APIs
 * Scraping Sites
 
-To begin with, let's start with Open Data. 
+To begin with, we'll start with [open data](https://en.wikipedia.org/wiki/Open_data) sources.
 
 <a name="opendata"/>
 ###Open Data Sources
 
-In New York City, as in many larger U.S. cities now, residents can file a 311 complaint for non-emergency services and the data has proven to be valuable. City officials, for instance, use the 311 dataset as one of several sources for the measurement of the performance of public services. What's more, NYC even allows the public to have complete access to this dataset and, because of this reason, NYC’s [Open Data](https://nycopendata.socrata.com/) portal - where the 311 dataset is updated daily - is where we often start. This dataset is just one source of information we use at Heat Seek. 
+In New York City, as in many larger U.S. cities now, residents can file a 311 complaint for non-emergency services. What's more, the city provides this data to the public for free. This dataset has proven to be extremely valuable: city officials, for instance, use the 311 dataset as one of several sources for the measurement of the performance of public services. Additionally, individuals are free to access and analyze the data as well. NYC’s [Open Data](https://nycopendata.socrata.com/) portal - where the 311 dataset is updated daily - is where Heat Seek often starts when attempting to answer a heat-related question, though this dataset is just one source of information we use at Heat Seek. 
 
 <a name="nyc311data"/>
 ####New York City 311 Data
+
+<a name="obtainingdata"/>
+#####Obtaining the data
 
 To obtain the latest NYC 311 dataset, follow these steps. 
 
 *1. Using [NYC Open Data](https://nycopendata.socrata.com/), let's search for '311 Service Requests from 2010-2015'. Or we can simply search for '311.'*
 
-Results should be returned, one being '311 Service Requests from 2010-2015.' Selecting this result shows that this is a large dataset: five years of complaint data, millions of rows, dozens of columns, and close to two hundred complaint types. At Heat Seek, we are focused on questions around heating within tenant's apartment so it is not necessary to download all the information within this dataset. We can narrow down our scope using filtering. 
+Results should include '311 Service Requests from 2010-2015.' This is a large dataset: five years of complaint data, millions of rows, dozens of columns, and close to two hundred complaint types. At Heat Seek, we are focused on questions around heating within tenant's apartment so it is not necessary to download all the information within this dataset. We can narrow down our scope using filtering. 
 
 
 *2. We are interested in complaint types that deal with heating, so we can remove a lot of these rows before we download the dataset by filtering down to heat-specific complaints.* 
 
-Using the site’s Filter panel, input the 'HEAT/HOT WATER' and 'Heating' for the Complaint Type filter.
+Using the site’s Filter panel, input the ```'HEAT/HOT WATER'``` and ```'Heating'``` within the Complaint Type filter.
 
-Note that Complaint Types related to heat were originally, in 2010, labelled as ‘Heating.’ Later, the complaint type was labelled within the dataset as ‘HEAT/HOT WATER.’ This is why we need to include both values when filtering down with the Complaint Type column. 
+Note that Complaint Types related to heat were originally, in 2010, labelled as ```‘Heating.’``` Later, the complaint type was labelled within the dataset as ```‘HEAT/HOT WATER.’``` This is why we need to include both values when filtering down with the Complaint Type column. 
 
 *3. After filtering down to heat-specific complaints by tenants, we can now download this dataset.* 
 
@@ -115,9 +119,9 @@ To check the number of rows, for example, we can use the ```wc -l``` command:
 > 1165725 
 ```
 
-Ok, so there are 1,165,725 rows within this dataset. That's a lot. But how many columns are there?
+Ok, so we see that there are 1,165,725 rows within this dataset. That's a lot. But how many columns are there?
 
-To check the number of columns we can use the incredibly useful ```awk``` command:
+To check the number of columns we can use the ```awk``` command:
 
 ```
 > awk -F',' '{print NF; exit}' 311_Service_Requests_from_2010_to_Present.csv
@@ -133,6 +137,7 @@ Additionally, we can see the overall size of the file using the ls command with 
 
 <a name="apis"/>
 ###APIs
+
 <a name="weatherunderground"/>
 ####Weather Underground
 
@@ -485,7 +490,7 @@ Additionally, we can use sed to remove the first line of the file (i.e. the head
 sed '1d' 311_Heat_Seek_Subset.csv > 311_Heat_Seek_Subset_No_Header.csv
 ```
 
-sed - which stands for Stream EDitor - is a Unix utility that parses and transforms text, using a simple, compact programming language. Both ```awk``` and ```sed``` are powerful - and fast - command line tools and we use them often when performing data analysis at Heat Seek. These commands allow us to quickly clean and massage our data so that we can load into a database or application without issues.  
+```sed``` - which stands for Stream EDitor - is a Unix utility that parses and transforms text, using a simple, compact programming language. Both ```awk``` and ```sed``` are powerful - and fast - command line tools and we use them often when performing data analysis at Heat Seek. These commands allow us to quickly clean and massage our data so that we can load into a database or application without issues.  
 
 <a name="wc"/>
 ####wc 
