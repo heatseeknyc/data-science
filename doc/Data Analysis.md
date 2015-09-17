@@ -826,7 +826,10 @@ COPY (SELECT * FROM complaints WHERE created_date > '2015-01-01' ORDER BY create
 
 - [R manuals](https://cran.r-project.org/manuals.html) document and assist with installation and syntax. 
 
+- [R Programming](https://www.coursera.org/course/rprog) is a useful and incredibly informative class offered by Coursera online. Highly recommended for beginners. 
+
 - [R Studio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) are helpful when using the R Studio application while developing R code. 
+
 
 <a name="resources"/>
 ###Other Useful Resources
