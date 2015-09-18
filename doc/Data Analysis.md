@@ -561,7 +561,7 @@ This app makes it easy to start PostgreSQL. Launch the app and you will see a sm
 
 You should be logged into your local instance. You now have PostgreSQL installed. 
 
-Note: if you have any issues getting PostgreSQL up and running, there are a number of great resources online. Hopefully these 
+Note: if you have any issues getting PostgreSQL up and running, there are a number of great resources online. See the [Useful PostgreSQL](#postgrescommands) section for helpful information information.
 
 <a name="postgresdb"/>
 #####Creating the Heat Seek Database 
