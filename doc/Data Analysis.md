@@ -58,9 +58,7 @@ We have repeatedly asked - and been asked - many questions related to our missio
 * In which boroughs and neighborhoods do the most heating complaints come from? 
 * What other trends do we see?
 
-We start all of our analyses with questions such as these and often our investigations leads to other questions. We dig for answers but there is a lot of information out there. How do we navigate the large amounts of data, find meaning and answer these questions? Using a variety of tools and techniques, we sift through loads of information and look for answers to our questions. 
-
-Ultimately, at the heart of all of our analyses is rich - and useful - datasets.
+We start all of our analyses with questions such as these and often our investigations lead to a lot of other questions. While we dig for answers we also find that there is *a lot* of information out there. How do we navigate this sea of data, discover meaning, spot trends, and ultimately answer our questions? This walkthrough will hopefully help you to understand how exactly we do just these sort of tasks at Heat Seek. Ultimately, at the heart of all of our analyses is data. But not just any sort. We want rich - and useful - datasets.
 
 <a name="data"/>
 ## Data
