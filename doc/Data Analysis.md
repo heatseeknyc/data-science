@@ -49,7 +49,7 @@
 <a name="overview"/>
 ## Overview
 
-At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, we deploy custom sensors to track a tenant's apartment's indoor temperature and then record the number of violations per hour. In addition to the hardware aspect of our mission, data plays a major role as well. In addition to our internal data, we spend a lot of time collecting and analyzing external data, and all of this starts with questions.
+At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, we deploy custom sensors to track a tenant's apartment's indoor temperature and then record the number of violations per hour. In addition to the hardware aspect of our mission, data plays a major role as well. Our internal datasets are clearly the key to our success. This data are then supplemented by external information and we spend a lot of time collecting and analyzing external data. All of this - internal and external - starts with a question. Well, many questions.
 
 We have repeatedly asked - and been asked - many questions related to our mission, including: 
 
