@@ -49,9 +49,9 @@
 <a name="overview"/>
 ## Overview
 
-At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, we deploy custom sensors to track a tenant's apartment's indoor temperature and then record the number of violations per hour. In addition to the hardware aspect of our mission, data plays a major role as well. Our internal datasets are clearly the key to our success. This data are then supplemented by external information and we spend a lot of time collecting and analyzing external data. All of this - internal and external - starts with a question. Well, many questions.
+At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, we deploy custom sensors to track a tenant's apartment's indoor temperature and then record the number of violations per hour. In addition to the hardware aspect of our mission, data plays a major role as well. Our internal datasets are clearly the key to our success. The information we collect is then supplemented by external data and we spend a lot of time collecting and analyzing external both. All of this - internal and external datasets  - starts with a lot of questions we want to answer. 
 
-We have repeatedly asked - and been asked - many questions related to our mission, including: 
+We have repeatedly asked - and been asked - many questions related to our mission and heating complains throughout the five boroughs, including: 
 
 * How many New Yorkers file heating complaints each winter? 
 * Are the number of complaints going up or down each year? 
