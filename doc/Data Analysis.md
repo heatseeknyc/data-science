@@ -49,9 +49,9 @@
 <a name="overview"/>
 ## Overview
 
-At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, we deploy custom sensors to track a a tenant's apartment's indoor temperature and then record the number of violations per hour. In addition to the hardware aspect of our mission, data plays a major role as well. In addition to our internal data, we spend a lot of time collecting and analyzing external data, and all of this starts with questions.
+At Heat Seek, our aim is to use innovative technology to eradicate the heating epidemic plaguing tens of thousands of New Yorkers in the winter months. To fulfill this mission, we deploy custom sensors to track a tenant's apartment's indoor temperature and then record the number of violations per hour. In addition to the hardware aspect of our mission, data plays a major role as well. Our internal datasets are clearly the key to our success. The information we collect is then supplemented by external data and we spend a lot of time collecting and analyzing external both. All of this - internal and external datasets  - starts with a lot of questions we want to answer. 
 
-We have repeatedly asked - and been asked - many questions related to our mission, including: 
+We have repeatedly asked - and been asked - many questions related to our mission and heating complains throughout the five boroughs, including: 
 
 * How many New Yorkers file heating complaints each winter? 
 * Are the number of complaints going up or down each year? 
@@ -105,7 +105,7 @@ On the right-hand side of the site, select the ‘Export’ icon:
 
 The ‘Download’ prompt will come up and we see that a number of formatting options are available:
 
-As you will see in the next section, a database such as PostgreSQL and a language such as R are two great ways in which explore and start an analysis of data. CSV-formatted data is very easy to import data into either and there are also data visualization tools which work well with comma-separated value files. 
+As you will see in the next section, a database such as PostgreSQL and a language such as R are two great ways in which to explore and start an analysis of data. CSV-formatted data is very easy to import into either and there are also data visualization tools which work well with comma-separated value files. 
 
 *4. Select CSV or CSV for Excel and save the file locally to your computer.* 
 
@@ -189,7 +189,7 @@ Another way that Heat Seek obtains data is through web scraping. Python librarie
 #### Building Information Numbers - BIN
 One example site that Heat Seek 'scraped' was the 'Geographic Online Address Translator' or [GOAT](http://a030-goat.nyc.gov/goat/Default.aspx). 
 
-This site contains a lot of useful information when a user is submits an address through the form. Data such as BIN, district numbers and other building-level information is returned. But this information is not readily available unless the form is submitted. Since information can be submitted through the URL, a Python script - bs_bin.py in the src directory - was created to assist in gathering this information. The BIN data was 'scraped' from each page after an address was entered in the URL by the script.
+This site contains a lot of useful information when a user submits an address through the form. Data such as BIN, district numbers and other building-level information is returned. But this information is not readily available unless the form is submitted. Since information can be submitted through the URL, a Python script - bs_bin.py in the src directory - was created to assist in gathering this information. The BIN data was 'scraped' from each page after an address was entered in the URL by the script.
 
 <a name="mergingdata"/>
 ###Merging Data
@@ -209,7 +209,7 @@ There are many ways to merge data and a database such as PostgreSQL is just one.
 <a name="datatools"/>
 ##Data Tools and Techniques Using ETL (Extract, Transform, Load)
 
-Now that we we our initial dataset we’ll need some tools to start our analysis and answer some questions. Many data organizations do not use any one tool, technique or technology, and Heat Seek is no different. Languages such as R and Python are powerful when analyzing data and a databases such as PostgreSQL can help us quickly load, select and merge datasets. Additionally, we also utilize data visualization tools and libraries. These include Tableau, Spotfire, Adobe Illustrator, and libraries such as D3.js, Python's matplotlib, and R’s ggplot2. In this document we will focus on data; data visualization will be covered separately within the [Data Visualizations](Data Visualizations.md) section of this repository.
+Now that we have our initial dataset we’ll need some tools to start our analysis and answer some questions. Many data organizations do not use any one tool, technique or technology, and Heat Seek is no different. Languages such as R and Python are powerful when analyzing data and a databases such as PostgreSQL can help us quickly load, select and merge datasets. Additionally, we also utilize data visualization tools and libraries. These include Tableau, Spotfire, Adobe Illustrator, and libraries such as D3.js, Python's matplotlib, and R’s ggplot2. In this document we will focus on data; data visualization will be covered separately within the [Data Visualizations](Data Visualizations.md) section of this repository.
 
 To begin with, let’s start with one of the most valuable weapons in data scientist's toolbox: R
 
@@ -235,7 +235,7 @@ Note: If you are not familiar with R, there are some great tutorials online. Add
 
 Note: you may want to first use setwd() to set your working directory. You can also use the absolute path to point directly to the file. 
 
-Additionally, if this is the first time you have set up R you may need to load some libraries as well. There are a lot of great R tutorials online to guide you through loading and using libraries, and basic R functionality. For the purposes of this post, though, we will not be focusing too heavily on R and instead spend our energy guiding you through Heat Seek’s methodology and how you can reproduce our results. 
+Additionally, if this is the first time you have set up R you may need to load some libraries as well. There are a lot of great R tutorials online to guide you through loading and using libraries, and basic R functionality. For the purposes of this post, though, we will not be focusing too heavily on R and instead will spend our energy guiding you through Heat Seek’s methodology and how you can reproduce our results. 
 
 *2. Even with our filtering limiting the dataset to heating complaints, the file is large. Depending on your computer’s resources, reading in the may take some time to successfully load.* 
 
@@ -363,7 +363,7 @@ Now let’s take a look at a little more complex example using R.
 
 In the example above, we’ve looked at a basic example of loading data, using R, and finding the complaint counts, by winter. Now let’s take a look at a more advanced analysis. 
 
-In this analysis, we’ll be plotting both complaint counts and median income on the x and y axies, respectively. We’ll also briefly touch upon how the data visualization for a scatter plot can be created, but a deeper dive into this topic will be done in the follow-up post.
+In this analysis, we’ll be plotting both complaint counts and median income on the x and y axes, respectively. We’ll also briefly touch upon how the data visualization for a scatter plot can be created, but a deeper dive into this topic will be done in the follow-up post.
 
 *1. We first set our working directory and then load in the data:*
 
@@ -561,7 +561,7 @@ This app makes it easy to start PostgreSQL. Launch the app and you will see a sm
 
 You should be logged into your local instance. You now have PostgreSQL installed. 
 
-Note: if you have any issues getting PostgreSQL up and running, there are a number of great resources online. Hopefully these 
+Note: if you have any issues getting PostgreSQL up and running, there are a number of great resources online. See the [Useful PostgreSQL](#postgrescommands) section for helpful information information.
 
 <a name="postgresdb"/>
 #####Creating the Heat Seek Database 
