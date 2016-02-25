@@ -1,104 +1,104 @@
-FirstName,LastName,SensorID,PercentageUptime
-Not,Assigned,nan,No valid readings.
-Loraine,Dellamore,19.0,95.80824632140751
-Malaika,Quashie,26.0,86.74440452565376
-Anonymous,Tenant,22.0,97.43589743589742
-Nicolas,Orosco,29.0,96.23441586471321
-Nicole,Carty,25.0,41.13914407139224
-Not,Assigned,28.0,98.46069691712037
-Anonymous,Tenant,24.0,66.10139262518021
-Anonymous,Tenant,39.0,139.4709963723453
-Anonymous,Tenant,38.0,294.93691627068654
-Not,Assigned,37.0,91.86568626615659
-Manuel,Yuicela,35.0,73.50246833620213
-Pedro,Marin,33.0,88.71520603473604
-Jose,Vicente Tacuri,32.0,92.60994479703577
-Palemon,Galvez,31.0,88.16624702176516
-Florencia,Tapia,34.0,97.50102886875605
-Not,Assigned,1.0,No valid readings.
-Harold,Cooper,8.0,No valid readings.
-Civic Hall,Test Account 2,43.0,95.92430744995661
-Civic Hall,Test Account 1,42.0,95.83174881367704
-Live Update,Account4,15.0,No valid readings.
-Nicole,Evangelista,44.0,87.72711275131161
-Adrianne,Jeffries Room,144.0,99.81628765140412
-Adrianne,Jeffries Colgate's Room,130.0,99.81628765140412
-Christopher,Lamar,98.0,91.36847039009066
-Adrianne,Living Room,152.0,99.81628765140412
-Live Update,Account0,10.0,No valid readings.
-Not,Assigned,114.0,95.23576778797396
-Victoria,Watts,123.0,71.14978541457566
-Zui,Mo,139.0,99.2019690087788
-Rebecca,Sharp,166.0,67.48122827405614
-Tammy,Brake,184.0,99.6396910078439
-Mapping Error,Only One Entry,87.0,100.0
-Noel,Hidalgo,102.0,99.99074159800018
-Louis,Bradford,93.0,100.0
-Tyler,Wenzel,132.0,59.544050192131714
-Denton,Sterling,121.0,99.99917731996976
-Armando,Suarez-Cobian,58.0,55.25791980669631
-Blue Ridge,Labs,179.0,99.46147435954873
-David,McCreery,169.0,99.99942129964525
-Michael,Kasino,107.0,8.084400702466638
-Ivo,Rodrigues,171.0,91.0176768126958
-Elizabeth,Ziff,174.0,90.03671579189054
-Dale,Goodson,89.0,52.415318600858186
-Carmen,Vega-Rivera,176.0,99.9986645477491
-Not,Assigned,164.0,96.27645349223776
-Annette ,Cummings ,154.0,99.99937578417112
-Valerie,McPherson,133.0,617.04558887269
-Jane,Angel,145.0,100.00045724946159
-Dara,Soukamneuth,167.0,99.99866256932776
-Redoneva,Andrews,181.0,99.99953314877148
-Not,Assigned,173.0,89.36254716356656
-Helen,Pugmire,178.0,98.45999564109394
-Not,Assigned,135.0,99.18587188491549
-Adrianne,Santiago,158.0,99.99768523876763
-Not,Assigned,170.0,100.0
-Christophe,Veyssier,168.0,100.0
-Wanda,Young,153.0,98.21428571428571
-Miguel,Rios,159.0,99.99797983879114
-Virgen,Martinez-Lopez,90.0,99.99999999999997
-Nancy,De Jesús,88.0,11.335803608053526
-Not,Assigned,186.0,No valid readings.
-Flay ,Harper ,187.0,No valid readings.
-Erin,Whittendale ,180.0,6.054893665975737
-Malaika,Quashie,188.0,No valid readings.
-Maria,Escobar,161.0,No valid readings.
-Live Update,Account2,13.0,No valid readings.
-Live Update,Account4,14.0,No valid readings.
-Not,Assigned,189.0,No valid readings.
-Susana,Robalino,193.0,No valid readings.
-Indira,Rodney,194.0,No valid readings.
-Janelle,Gedeon,195.0,No valid readings.
-Constance,Taylor,191.0,No valid readings.
-Not,Assigned,192.0,No valid readings.
-Blue Ridge,Labs,296.0,No valid readings.
-Kenny,Harewood,155.0,No valid readings.
-Hazel-Ann,FTC,267.0,No valid readings.
-Aurelia,Cruz,276.0,No valid readings.
-Iris,Brown ,283.0,No valid readings.
-Not,Assigned,287.0,No valid readings.
-Not,Assigned,172.0,No valid readings.
-Ramona,Garcia ,285.0,No valid readings.
-Carolyn,Butler ,271.0,No valid readings.
-Roylyn ,Henery,292.0,No valid readings.
-Desiree,Browne,11.0,No valid readings.
-Arlene,Riley,160.0,No valid readings.
-Denise,Johnson ,274.0,No valid readings.
-Lisa,Mathis,228.0,No valid readings.
-Janice,Lee,284.0,No valid readings.
-Wanda,Perez,268.0,No valid readings.
-Annery,Ortiz,214.0,No valid readings.
-Julio,Belmonte ,282.0,No valid readings.
-Charles,Cordrey,27.0,100.0
-Rita,Kettrles,190.0,No valid readings.
-Korima,Rock,85.0,199.77802441731413
-Nioka,Jenkins,288.0,No valid readings.
-Tanya,Thomas,273.0,No valid readings.
-Sunshine,Jerido,275.0,No valid readings.
-Odalis,Polanco,201.0,No valid readings.
-Yolanda,Rosado,277.0,No valid readings.
-Not,Assigned,21.0,43459.7875569044
-David,Olshefski,136.0,No valid readings.
-Beatrice,Rodriguez,67.0,100.0
+FirstName,LastName,SensorID,UserID,PercentageUptime
+Not,Assigned,nan,None,No valid readings.
+Loraine,Dellamore,19.0,245,99.44412236128636
+Malaika,Quashie,26.0,135,No valid readings.
+Anonymous,Tenant,22.0,127,No valid readings.
+Nicolas,Orosco,29.0,138,No valid readings.
+Nicole,Carty,25.0,134,No valid readings.
+Not,Assigned,28.0,None,No valid readings.
+Anonymous,Tenant,24.0,132,No valid readings.
+Anonymous,Tenant,39.0,124,No valid readings.
+Anonymous,Tenant,38.0,125,No valid readings.
+Not,Assigned,37.0,None,No valid readings.
+Manuel,Yuicela,35.0,147,No valid readings.
+Pedro,Marin,33.0,145,No valid readings.
+Jose,Vicente Tacuri,32.0,144,No valid readings.
+Palemon,Galvez,31.0,143,No valid readings.
+Florencia,Tapia,34.0,146,No valid readings.
+Not,Assigned,1.0,None,No valid readings.
+Harold,Cooper,8.0,25,No valid readings.
+Civic Hall,Test Account 2,43.0,159,95.92430744995661
+Civic Hall,Test Account 1,42.0,158,95.83174881367704
+Live Update,Account4,15.0,92,No valid readings.
+Nicole,Evangelista,44.0,160,88.32837300079345
+Adrianne,Jeffries Room,144.0,164,99.81628765140412
+Adrianne,Jeffries Colgate's Room,130.0,165,99.81628765140412
+Christopher,Lamar,98.0,266,84.88768372880835
+Adrianne,Living Room,152.0,162,99.81628765140412
+Live Update,Account0,10.0,88,No valid readings.
+Not,Assigned,114.0,None,95.23576778797396
+Victoria,Watts,123.0,166,70.8431461483016
+Zui,Mo,139.0,168,98.88779993824308
+Rebecca,Sharp,166.0,112,68.58156016707065
+Tammy,Brake,184.0,254,78.9434116545322
+Mapping Error,Only One Entry,87.0,None,100.0
+Noel,Hidalgo,102.0,174,99.99074159800018
+Louis,Bradford,93.0,175,100.0
+Tyler,Wenzel,132.0,181,55.757861382492216
+Denton,Sterling,121.0,179,99.68957373075388
+Armando,Suarez-Cobian,58.0,180,51.99378765246466
+Blue Ridge,Labs,179.0,169,97.63306240711991
+David,McCreery,169.0,187,99.99945251567605
+Michael,Kasino,107.0,189,8.084400702466638
+Ivo,Rodrigues,171.0,188,91.0176768126958
+Elizabeth,Ziff,174.0,191,90.03671579189054
+Dale,Goodson,89.0,190,52.415318600858186
+Carmen,Vega-Rivera,176.0,123,73.75140647376965
+Not,Assigned,164.0,None,68.40700245687604
+Annette ,Cummings ,154.0,251,74.75612790944885
+Valerie,McPherson,133.0,196,617.04558887269
+Jane,Angel,145.0,199,100.00040878466567
+Dara,Soukamneuth,167.0,200,95.43706151101158
+Redoneva,Andrews,181.0,202,94.33006379626666
+Not,Assigned,173.0,None,66.52959860532724
+Helen,Pugmire,178.0,201,99.39863350681283
+Not,Assigned,135.0,None,99.18587188491549
+Adrianne,Santiago,158.0,204,99.47477580495604
+Not,Assigned,170.0,None,99.99977954193223
+Christophe,Veyssier,168.0,176,57.3325245530694
+Wanda,Young,153.0,207,98.8442497036812
+Miguel,Rios,159.0,208,99.9978309456767
+Virgen,Martinez-Lopez,90.0,212,99.94796587233205
+Nancy,De Jesús,88.0,211,35.40410868262152
+Not,Assigned,186.0,None,91.47655084792575
+Flay ,Harper ,187.0,215,99.99831187625746
+Erin,Whittendale ,180.0,218,6.180922026166333
+Malaika,Quashie,188.0,135,99.89278103534483
+Maria,Escobar,161.0,217,12.698857102860742
+Live Update,Account2,13.0,90,No valid readings.
+Live Update,Account4,14.0,92,No valid readings.
+Not,Assigned,189.0,None,97.52310270492498
+Susana,Robalino,193.0,170,99.77900147739345
+Indira,Rodney,194.0,225,90.83681693475003
+Janelle,Gedeon,195.0,226,99.39746963968418
+Constance,Taylor,191.0,223,98.18783680255201
+Not,Assigned,192.0,None,98.73956866030528
+Blue Ridge,Labs,296.0,169,5.773184176294294
+Kenny,Harewood,155.0,195,99.59650760825373
+Hazel-Ann,FTC,267.0,264,64.04981652396306
+Aurelia,Cruz,276.0,240,99.55937180862841
+Iris,Brown ,283.0,241,97.40835591023792
+Not,Assigned,287.0,None,100.0
+Not,Assigned,172.0,None,95.43650636481016
+Ramona,Garcia ,285.0,260,60.743023947084986
+Carolyn,Butler ,271.0,250,99.99865127059944
+Roylyn ,Henery,292.0,238,99.99917673564707
+Desiree,Browne,11.0,239,99.99721157496681
+Arlene,Riley,160.0,242,99.10035034058723
+Denise,Johnson ,274.0,258,99.99972117741201
+Lisa,Mathis,228.0,194,99.85398480567346
+Janice,Lee,284.0,243,100.0
+Wanda,Perez,268.0,261,99.5543580415528
+Annery,Ortiz,214.0,203,61.03650577617161
+Julio,Belmonte ,282.0,262,20.669502658287268
+Charles,Cordrey,27.0,236,94.74819165900583
+Rita,Kettrles,190.0,246,97.61706892699057
+Korima,Rock,85.0,267,9.583255890466509
+Nioka,Jenkins,288.0,268,91.73483520940304
+Tanya,Thomas,273.0,213,87.74312156600581
+Sunshine,Jerido,275.0,214,93.91535788595388
+Odalis,Polanco,201.0,222,89.38942704734612
+Yolanda,Rosado,277.0,270,99.81917034573848
+Not,Assigned,21.0,None,No valid readings.
+David,Olshefski,136.0,224,99.99884260598834
+Beatrice,Rodriguez,67.0,244,2.0657542653003893
