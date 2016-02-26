@@ -1,104 +1,104 @@
-FirstName,LastName,SensorID,UserID,PercentageUptime
-Not,Assigned,nan,None,No valid readings.
-Loraine,Dellamore,19.0,245,99.44412236128636
-Malaika,Quashie,26.0,135,No valid readings.
-Anonymous,Tenant,22.0,127,No valid readings.
-Nicolas,Orosco,29.0,138,No valid readings.
-Nicole,Carty,25.0,134,No valid readings.
-Not,Assigned,28.0,None,No valid readings.
-Anonymous,Tenant,24.0,132,No valid readings.
-Anonymous,Tenant,39.0,124,No valid readings.
-Anonymous,Tenant,38.0,125,No valid readings.
-Not,Assigned,37.0,None,No valid readings.
-Manuel,Yuicela,35.0,147,No valid readings.
-Pedro,Marin,33.0,145,No valid readings.
-Jose,Vicente Tacuri,32.0,144,No valid readings.
-Palemon,Galvez,31.0,143,No valid readings.
-Florencia,Tapia,34.0,146,No valid readings.
-Not,Assigned,1.0,None,No valid readings.
-Harold,Cooper,8.0,25,No valid readings.
-Civic Hall,Test Account 2,43.0,159,95.92430744995661
-Civic Hall,Test Account 1,42.0,158,95.83174881367704
-Live Update,Account4,15.0,92,No valid readings.
-Nicole,Evangelista,44.0,160,88.32837300079345
-Adrianne,Jeffries Room,144.0,164,99.81628765140412
-Adrianne,Jeffries Colgate's Room,130.0,165,99.81628765140412
-Christopher,Lamar,98.0,266,84.88768372880835
-Adrianne,Living Room,152.0,162,99.81628765140412
-Live Update,Account0,10.0,88,No valid readings.
-Not,Assigned,114.0,None,95.23576778797396
-Victoria,Watts,123.0,166,70.8431461483016
-Zui,Mo,139.0,168,98.88779993824308
-Rebecca,Sharp,166.0,112,68.58156016707065
-Tammy,Brake,184.0,254,78.9434116545322
-Mapping Error,Only One Entry,87.0,None,100.0
-Noel,Hidalgo,102.0,174,99.99074159800018
-Louis,Bradford,93.0,175,100.0
-Tyler,Wenzel,132.0,181,55.757861382492216
-Denton,Sterling,121.0,179,99.68957373075388
-Armando,Suarez-Cobian,58.0,180,51.99378765246466
-Blue Ridge,Labs,179.0,169,97.63306240711991
-David,McCreery,169.0,187,99.99945251567605
-Michael,Kasino,107.0,189,8.084400702466638
-Ivo,Rodrigues,171.0,188,91.0176768126958
-Elizabeth,Ziff,174.0,191,90.03671579189054
-Dale,Goodson,89.0,190,52.415318600858186
-Carmen,Vega-Rivera,176.0,123,73.75140647376965
-Not,Assigned,164.0,None,68.40700245687604
-Annette ,Cummings ,154.0,251,74.75612790944885
-Valerie,McPherson,133.0,196,617.04558887269
-Jane,Angel,145.0,199,100.00040878466567
-Dara,Soukamneuth,167.0,200,95.43706151101158
-Redoneva,Andrews,181.0,202,94.33006379626666
-Not,Assigned,173.0,None,66.52959860532724
-Helen,Pugmire,178.0,201,99.39863350681283
-Not,Assigned,135.0,None,99.18587188491549
-Adrianne,Santiago,158.0,204,99.47477580495604
-Not,Assigned,170.0,None,99.99977954193223
-Christophe,Veyssier,168.0,176,57.3325245530694
-Wanda,Young,153.0,207,98.8442497036812
-Miguel,Rios,159.0,208,99.9978309456767
-Virgen,Martinez-Lopez,90.0,212,99.94796587233205
-Nancy,De Jesús,88.0,211,35.40410868262152
-Not,Assigned,186.0,None,91.47655084792575
-Flay ,Harper ,187.0,215,99.99831187625746
-Erin,Whittendale ,180.0,218,6.180922026166333
-Malaika,Quashie,188.0,135,99.89278103534483
-Maria,Escobar,161.0,217,12.698857102860742
-Live Update,Account2,13.0,90,No valid readings.
-Live Update,Account4,14.0,92,No valid readings.
-Not,Assigned,189.0,None,97.52310270492498
-Susana,Robalino,193.0,170,99.77900147739345
-Indira,Rodney,194.0,225,90.83681693475003
-Janelle,Gedeon,195.0,226,99.39746963968418
-Constance,Taylor,191.0,223,98.18783680255201
-Not,Assigned,192.0,None,98.73956866030528
-Blue Ridge,Labs,296.0,169,5.773184176294294
-Kenny,Harewood,155.0,195,99.59650760825373
-Hazel-Ann,FTC,267.0,264,64.04981652396306
-Aurelia,Cruz,276.0,240,99.55937180862841
-Iris,Brown ,283.0,241,97.40835591023792
-Not,Assigned,287.0,None,100.0
-Not,Assigned,172.0,None,95.43650636481016
-Ramona,Garcia ,285.0,260,60.743023947084986
-Carolyn,Butler ,271.0,250,99.99865127059944
-Roylyn ,Henery,292.0,238,99.99917673564707
-Desiree,Browne,11.0,239,99.99721157496681
-Arlene,Riley,160.0,242,99.10035034058723
-Denise,Johnson ,274.0,258,99.99972117741201
-Lisa,Mathis,228.0,194,99.85398480567346
-Janice,Lee,284.0,243,100.0
-Wanda,Perez,268.0,261,99.5543580415528
-Annery,Ortiz,214.0,203,61.03650577617161
-Julio,Belmonte ,282.0,262,20.669502658287268
-Charles,Cordrey,27.0,236,94.74819165900583
-Rita,Kettrles,190.0,246,97.61706892699057
-Korima,Rock,85.0,267,9.583255890466509
-Nioka,Jenkins,288.0,268,91.73483520940304
-Tanya,Thomas,273.0,213,87.74312156600581
-Sunshine,Jerido,275.0,214,93.91535788595388
-Odalis,Polanco,201.0,222,89.38942704734612
-Yolanda,Rosado,277.0,270,99.81917034573848
-Not,Assigned,21.0,None,No valid readings.
-David,Olshefski,136.0,224,99.99884260598834
-Beatrice,Rodriguez,67.0,244,2.0657542653003893
+FirstName,LastName,SensorID,UserID,Percentage of uptime in daterange,Percentage of uptime while sensor was transmitting
+Not,Assigned,nan,None,No valid readings during this time frame.
+Loraine,Dellamore,19.0,245,99.31034482758618,99.99980709913753
+Malaika,Quashie,26.0,135,No valid readings during this time frame.
+Anonymous,Tenant,22.0,127,No valid readings during this time frame.
+Nicolas,Orosco,29.0,138,No valid readings during this time frame.
+Nicole,Carty,25.0,134,No valid readings during this time frame.
+Not,Assigned,28.0,None,No valid readings during this time frame.
+Anonymous,Tenant,24.0,132,No valid readings during this time frame.
+Anonymous,Tenant,39.0,124,No valid readings during this time frame.
+Anonymous,Tenant,38.0,125,No valid readings during this time frame.
+Not,Assigned,37.0,None,No valid readings during this time frame.
+Manuel,Yuicela,35.0,147,No valid readings during this time frame.
+Pedro,Marin,33.0,145,No valid readings during this time frame.
+Jose,Vicente Tacuri,32.0,144,No valid readings during this time frame.
+Palemon,Galvez,31.0,143,No valid readings during this time frame.
+Florencia,Tapia,34.0,146,No valid readings during this time frame.
+Not,Assigned,1.0,None,No valid readings during this time frame.
+Harold,Cooper,8.0,25,No valid readings during this time frame.
+Civic Hall,Test Account 2,43.0,159,No valid readings during this time frame.
+Civic Hall,Test Account 1,42.0,158,No valid readings during this time frame.
+Live Update,Account4,15.0,92,No valid readings during this time frame.
+Nicole,Evangelista,44.0,160,No valid readings during this time frame.
+Adrianne,Jeffries Room,144.0,164,No valid readings during this time frame.
+Adrianne,Jeffries Colgate's Room,130.0,165,No valid readings during this time frame.
+Christopher,Lamar,98.0,266,36.55172413793103,96.36217633066165
+Adrianne,Living Room,152.0,162,No valid readings during this time frame.
+Live Update,Account0,10.0,88,No valid readings during this time frame.
+Not,Assigned,114.0,None,No valid readings during this time frame.
+Victoria,Watts,123.0,166,No valid readings during this time frame.
+Zui,Mo,139.0,168,No valid readings during this time frame.
+Rebecca,Sharp,166.0,112,No valid readings during this time frame.
+Tammy,Brake,184.0,254,95.17241379310343,95.8331484700068
+Mapping Error,Only One Entry,87.0,None,No valid readings during this time frame.
+Noel,Hidalgo,102.0,174,No valid readings during this time frame.
+Louis,Bradford,93.0,175,No valid readings during this time frame.
+Tyler,Wenzel,132.0,181,No valid readings during this time frame.
+Denton,Sterling,121.0,179,No valid readings during this time frame.
+Armando,Suarez-Cobian,58.0,180,No valid readings during this time frame.
+Blue Ridge,Labs,179.0,169,No valid readings during this time frame.
+David,McCreery,169.0,187,No valid readings during this time frame.
+Michael,Kasino,107.0,189,No valid readings during this time frame.
+Ivo,Rodrigues,171.0,188,No valid readings during this time frame.
+Elizabeth,Ziff,174.0,191,No valid readings during this time frame.
+Dale,Goodson,89.0,190,No valid readings during this time frame.
+Carmen,Vega-Rivera,176.0,123,No valid readings during this time frame.
+Not,Assigned,164.0,None,No valid readings during this time frame.
+Annette ,Cummings ,154.0,251,99.31034482758618,99.99942129964523
+Valerie,McPherson,133.0,196,No valid readings during this time frame.
+Jane,Angel,145.0,199,99.31034482758618,100.00038580395756
+Dara,Soukamneuth,167.0,200,97.24137931034481,97.91534450730795
+Redoneva,Andrews,181.0,202,99.31034482758618,99.99942129964523
+Not,Assigned,173.0,None,No valid readings during this time frame.
+Helen,Pugmire,178.0,201,99.31034482758618,99.99845681393805
+Not,Assigned,135.0,None,No valid readings during this time frame.
+Adrianne,Santiago,158.0,204,No valid readings during this time frame.
+Not,Assigned,170.0,None,No valid readings during this time frame.
+Christophe,Veyssier,168.0,176,No valid readings during this time frame.
+Wanda,Young,153.0,207,No valid readings during this time frame.
+Miguel,Rios,159.0,208,99.31034482758618,99.9976852387676
+Virgen,Martinez-Lopez,90.0,212,98.6206896551724,99.3645916169329
+Nancy,De Jesús,88.0,211,89.65517241379308,92.91041887113839
+Not,Assigned,186.0,None,No valid readings during this time frame.
+Flay ,Harper ,187.0,215,No valid readings during this time frame.
+Erin,Whittendale ,180.0,218,No valid readings during this time frame.
+Malaika,Quashie,188.0,135,99.31034482758618,99.99980709913753
+Maria,Escobar,161.0,217,No valid readings during this time frame.
+Live Update,Account2,13.0,90,No valid readings during this time frame.
+Live Update,Account4,14.0,92,No valid readings during this time frame.
+Not,Assigned,189.0,None,99.31034482758618,99.99903550312979
+Susana,Robalino,193.0,170,99.31034482758618,99.99884260598833
+Indira,Rodney,194.0,225,98.6206896551724,99.30478931489725
+Janelle,Gedeon,195.0,226,99.31034482758618,99.9986497095911
+Constance,Taylor,191.0,223,98.6206896551724,99.30574711756773
+Not,Assigned,192.0,None,99.31034482758618,99.99961419901928
+Blue Ridge,Labs,296.0,169,5.517241379310344,780.276347873205,Sensor has readings more frequent than once per hour. Check readings table.
+Kenny,Harewood,155.0,195,97.9310344827586,98.61187200518522
+Hazel-Ann,FTC,267.0,264,99.31034482758618,99.99942129964523
+Aurelia,Cruz,276.0,240,97.24137931034481,99.99822698179108
+Iris,Brown ,283.0,241,83.44827586206895,83.59817603979549
+Not,Assigned,287.0,None,No valid readings during this time frame.
+Not,Assigned,172.0,None,No valid readings during this time frame.
+Ramona,Garcia ,285.0,260,99.31034482758618,99.99999999999997
+Carolyn,Butler ,271.0,250,99.31034482758618,99.99845681393805
+Roylyn ,Henery,292.0,238,99.31034482758618,99.99922840101542
+Desiree,Browne,11.0,239,23.44827586206896,99.9975490796794
+Arlene,Riley,160.0,242,95.86206896551722,96.54845076781486
+Denise,Johnson ,274.0,258,99.31034482758618,99.99980709913753
+Lisa,Mathis,228.0,194,99.31034482758618,99.99961419901928
+Janice,Lee,284.0,243,No valid readings during this time frame.
+Wanda,Perez,268.0,261,97.9310344827586,98.6113013335288
+Annery,Ortiz,214.0,203,84.13793103448273,90.37037037037035
+Julio,Belmonte ,282.0,262,14.482758620689653,42.85835766319907
+Charles,Cordrey,27.0,236,99.31034482758618,99.99961419901928
+Rita,Kettrles,190.0,246,99.31034482758618,99.99421329784155
+Korima,Rock,85.0,267,35.17241379310344,94.44395862161204
+Nioka,Jenkins,288.0,268,35.17241379310344,99.99945534065719
+Tanya,Thomas,273.0,213,24.827586206896544,76.59438662435063
+Sunshine,Jerido,275.0,214,No valid readings during this time frame.
+Odalis,Polanco,201.0,222,98.6206896551724,99.30651337300705
+Yolanda,Rosado,277.0,270,98.6206896551724,99.30498087395326
+Not,Assigned,21.0,None,No valid readings during this time frame.
+David,Olshefski,136.0,224,No valid readings during this time frame.
+Beatrice,Rodriguez,67.0,244,No valid readings during this time frame.
